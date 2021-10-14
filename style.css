@@ -4,6 +4,9 @@
     padding: 0;
     font-family: 'Prompt', sans-serif;
 }
+html:focus-within {
+    scroll-behavior: smooth;
+}
 body {
     position: relative;
 }
@@ -67,6 +70,8 @@ body {
 
 .keyboards li:hover, .slimKeyboards li:hover, .accessories li:hover, .switch li:hover, .blog li:hover {
     background-color: rgb(228, 228, 228);
+    opacity: 1;
+    pointer-events: all;
 }
 
 .keyboards a, .slimKeyboards a, .accessories a, .switch a, .blog a{
@@ -97,7 +102,7 @@ body {
     transform: scale(1.1);
 }
 
-.keyboards button:hover + ul, .slimKeyboards button:hover  + ul, .accessories button:hover  + ul , .switch button:hover  + ul, .blog button:hover + ul {
+.keyboards button:focus + ul, .slimKeyboards button:hover  + ul, .accessories button:hover  + ul , .switch button:hover  + ul, .blog button:hover + ul {
     opacity: 1;
     pointer-events: all;
     transform: translateY(0px);
@@ -110,8 +115,14 @@ body {
     color:rgb(28, 29, 29);
 }
 
+.icons i:hover {
+    transform: scale(1.25);
+    color:rgb(54, 54, 54);
+}
+
 .icons a:hover {
     transform: scale(1.25);
+    color:rgb(54, 54, 54);
 }
 
 
@@ -128,6 +139,7 @@ body {
     text-decoration: none;
     font-size: 20px;
     color: #000;
+    z-index: 1000;
 }
 .buy a:hover {
     color: rgb(100, 99, 99);
