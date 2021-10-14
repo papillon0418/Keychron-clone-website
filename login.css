@@ -129,6 +129,21 @@
 /* nav end here */
 
 
+.icons a{
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color:rgb(28, 29, 29);
+}
+
+.icons a:hover {
+    transform: scale(1.25);
+    color:rgb(54, 54, 54);
+}
+
+
+
+
 /* footer start here */
 #footer {
     background-color: rgb(238, 235, 235);
