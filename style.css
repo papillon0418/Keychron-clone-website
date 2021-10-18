@@ -325,6 +325,13 @@ body {
     text-decoration: none;
 }
 
+.one a:hover,
+.four a:hover,
+.three a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 .regis {
     font-size: 3em;
 }
