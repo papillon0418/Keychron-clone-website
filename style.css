@@ -27,6 +27,7 @@ body {
 .covidTxt p {
     color: #fff;
     font-size: 20px;
+    margin-top: 15px;
 }
 
 
@@ -284,6 +285,8 @@ body {
     /* border: 2px solid black; */
 }
 
+
+
 .one p,
 .four p {
     font-size: 2em;
@@ -318,6 +321,39 @@ body {
     opacity: 1;
 }
 
+.buttonX1 {
+    width: 30%;
+    height: 7%;
+    border-radius: 30px;
+    font-size: 100%;
+    position: absolute;
+    left: 12.75%;
+    bottom: 0;
+    background-color: #000;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.buttonX2 {
+    width: 30%;
+    height: 7%;
+    border-radius: 30px;
+    font-size: 100%;
+    position: absolute;
+    left: 57.25%;
+    bottom: 0;
+    background-color: #000;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.buttonX1 a, .buttonX2 a {
+    color: #fff;
+    text-decoration: none;
+}
+.buttonX1 a:hover, .buttonX2 a:hover {
+    color: #fff;
+}
 .one a,
 .four a,
 .three a {
@@ -344,6 +380,7 @@ body {
 .three img {
     width: 100%;
     height: 100%;
+    /* border: 2px solid black */
 }
 
 #gray1 {
@@ -373,11 +410,12 @@ body {
 /* content end here */
 
 
-/* footer start here */
+
 
 #footer {
     background-color: rgb(238, 235, 235);
     color: #000;
+    position: relative;
 }
 
 #footer .footer-content {
@@ -501,3 +539,4 @@ body {
 
 
 /* footer end here */
+
