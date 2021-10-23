@@ -1,4 +1,4 @@
 # Keychron-clone-website
-Keychron.com clone with html, css , javascript
+Keychron.com clone with HTML, CSS, Javascript
 
 Authorized visalcoolcool
