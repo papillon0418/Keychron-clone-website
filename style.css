@@ -548,3 +548,13 @@ body {
 
 
 /* footer end here */
+
+/* carousel */
+#myCarousel {
+    cursor: pointer;
+}
+
+#myCarousel  ol li{
+    border-radius: 0;
+    width: 3%;
+}
