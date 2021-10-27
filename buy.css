@@ -4,6 +4,11 @@
     padding: 0;
     font-family: 'Prompt', sans-serif;
 }
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
 /* top */
 .covidTxt {
     height: 5vh;
@@ -16,6 +21,7 @@
 .covidTxt p {
     color: #fff;
     font-size: 20px;
+    margin-top: 15px;
 }
 /* top end here */
 /* nav start here */
