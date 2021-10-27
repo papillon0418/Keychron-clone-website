@@ -1,1 +1,1 @@
-for initing js folder
+Folder for js
