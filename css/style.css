@@ -556,3 +556,35 @@ body {
 .wrapp:hover, .wrappp:hover{
     transform: scale(1.025);
 }
+
+@media (max-width: 800px) {
+    body{
+        overflow: hidden;
+        overflow-y: scroll;
+    }
+    .firstRow {
+        flex-direction: column;
+    }
+
+    .influencer {
+        transform: scale(0.5);
+    }
+
+    h1, p, button {
+        transform: scale(0.75);
+    }
+    .nav-container {
+        width: 100%;
+        transform:scale(0.75);
+    }
+
+    .buttonX1 {
+        left: 35%;
+    }
+
+    .buttonX2 {
+        top: 138%;
+        left: 35% ;
+        z-index: 1000;
+    }
+}
