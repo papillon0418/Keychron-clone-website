@@ -146,7 +146,7 @@ body {
 .blog button:hover+ul {
     opacity: 1;
     pointer-events: all;
-    transform: translateY(0px);
+    transform: translateY(15px);
 }
 
 .icons a {
@@ -185,7 +185,6 @@ body {
 .buy a:hover {
     color: rgb(100, 99, 99);
 }
-
 
 /* nav end here */
 
@@ -283,6 +282,9 @@ body {
     /* border: 2px solid red; */
 }
 
+.four p:hover, .one p:hover  {
+    color: rgb(67, 68, 68);
+}
 .one,
 .two,
 .three,
@@ -299,13 +301,15 @@ body {
 .four p {
     font-size: 2em;
     padding: 12px;
-    color: rgb(67, 68, 68)
+    color: rgb(67, 68, 68);
 }
+
+
 
 .one button,
 .four button {
     width: 60%;
-    height: 9%;
+    height: 15%;
     border-radius: 30px;
     font-size: 100%;
     position: absolute;
@@ -314,6 +318,7 @@ body {
     background-color: #000;
     cursor: pointer;
     opacity: 1;
+    letter-spacing: 1px;
 }
 
 .three button {
@@ -331,7 +336,7 @@ body {
 
 .buttonX1 {
     width: 30%;
-    height: 7%;
+    height: 10%;
     border-radius: 30px;
     font-size: 100%;
     position: absolute;
@@ -340,11 +345,12 @@ body {
     background-color: #000;
     cursor: pointer;
     opacity: 1;
+    letter-spacing: 1px;
 }
 
 .buttonX2 {
     width: 30%;
-    height: 7%;
+    height: 10%;
     border-radius: 30px;
     font-size: 100%;
     position: absolute;
@@ -353,6 +359,7 @@ body {
     background-color: #000;
     cursor: pointer;
     opacity: 1;
+    letter-spacing: 1px;
 }
 
 .buttonX1 a,
@@ -364,6 +371,7 @@ body {
 .buttonX1 a:hover,
 .buttonX2 a:hover {
     color: #fff;
+    text-decoration: none;
 }
 
 .one a,
@@ -372,6 +380,7 @@ body {
     color: #fff;
     text-decoration: none;
 }
+
 
 .one a:hover,
 .four a:hover,
@@ -557,4 +566,57 @@ body {
 #myCarousel  ol li{
     border-radius: 0;
     width: 3%;
+}
+
+
+.contactContainer {
+    width: 150px;
+    position: absolute;
+    top: 9.5%;
+    left: 82%;
+
+}
+
+.insideContainer {
+    width: 200px;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 1000;
+    /* background-color: red; */
+}
+.wrapp {
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    height: 45px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.wrappp {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    width: 50px;
+    height: 45px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.insideContainer p{
+    font-size: 20px;
+    color: rgb(65, 125, 204);
+}
+
+.insideContainer a{
+    font-size: 20px;
+}
+
+.insideContainer a:hover, p:hover {
+    color: rgb(70, 133, 216);
+}
+
+.wrapp:hover, .wrappp:hover{
+    transform: scale(1.025);
 }
