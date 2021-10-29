@@ -35,7 +35,9 @@
 }
 
 .pic {
-    top: 0;
+    display: flex;
+    flex-direction: column;
+    top: 20px;
     width: 45%;
     position: absolute;
     /* border: 1px solid green; */
@@ -44,20 +46,23 @@
 }
 
 .li {
+    margin-left: 20px;
     list-style: none;
-    width: 15%;
-    height: 80px;
-    /* border: 1px solid green; */
+    width: 12%;
+    height: 85px;
+    border: 2px solid white;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-
 /* li:hover ul{
     display: flex;
 } */
+.active{
+    border: 2px solid black;
+}
 .li img {
     width: 100%;
     height: 100%;
@@ -65,7 +70,7 @@
 }
 
 ul {
-    width: 420px;
+    width: 460px;
     height: 85%;
     position: absolute;
     top: 10%;
@@ -223,14 +228,17 @@ label.click input:checked+span {
     width: 100%;
 }
 .swap-right{
+    top: 20px;
+    width: 42%;
     text-align: justify;
     /* border: 2px solid red; */
     position: absolute;
     right: 0;
 }
+
 .pic-video{
     position: absolute;
-    top: 540px;
+    top: 520px;
     width: 100%;
 }
 #p1{
@@ -309,12 +317,12 @@ label.click input:checked+span {
     top: 500px;
 }
 #change-3{
-    top: 900px;
+    top: 910px;
     width: 57%;
     right: 0;
 }
 .text-left-2{
-    top:900px;
+    top:930px;
     width: 40%;
     left: 0;
     position: absolute;
@@ -323,10 +331,10 @@ label.click input:checked+span {
 }
 #bat-1{
     height: 220px;
-    top: 1450px;
+    top: 1465px;
 }
 #bat-2{
-    top: 1380px;
+    top: 1395px;
     height: 309px;
     width: 480px;
 }
@@ -407,7 +415,7 @@ label.click input:checked+span {
 }
 #text-bat{
     position: relative;
-    top: 1720px;
+    top: 1735px;
     text-align: justify;
 }
 #star{
@@ -669,8 +677,8 @@ iframe{
     color: rgb(36, 35, 35);
     font-size: 0.8rem;
     /* position: relative; */
-    
-    
+
+
 }
 
 .footer-info .footer-info-items{
@@ -678,7 +686,7 @@ iframe{
     list-style: none;
     margin-bottom: 15px;
     position: relative;
-    
+
 }
 
 
@@ -692,7 +700,7 @@ iframe{
 }
 
 /* .footer-info .rights{
-    
+
 } */
 
 .footer-info .rights .country{
