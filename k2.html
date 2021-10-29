@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/k2.css">
+    <!-- <link rel="stylesheet" href="test-nav.css"> -->
 </head>
 <style>
 
@@ -34,7 +35,7 @@
             <img src="img/keychronlogo.png" alt="">
         </div>
         <div class="keyboards">
-            <button >Keyboard <i class="fas fa-chevron-down"></i></button>
+            <button>Keyboard <i class="fas fa-chevron-down"></i></button>
             <ul>
                 <li><a href="k2.html">Keychron K2</a></li>
                 <li><a href="#">Keychron K4</a></li>
@@ -88,16 +89,17 @@
     <div class="b-box">
         <div class="pic">
             <ul><img src="img/k2-01.png" id="Product"></ul>
-            <div class="li"><img class="small-img" src="img/k2-01.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-blue-black.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-brown.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-red.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-bblue.png"></div>
+            <div class="li active" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-01.png"></div>
+            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-blue-black.png"></div>
+            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-brown.png"></div>
+            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-red.png"></div>
+            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-bblue.png"></div>
         </div>
         <div class="detail">
             <h2>Keychron K2 V.2 Wireless Hot-swappable Mechanical Keyboard
             </h2>
-            <span id="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span id="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i></span>
             <span> 69 รีวิว</span>
             <h4>3,890.00 B</h2>
                 <h7>Tax included.
@@ -134,7 +136,7 @@
                 <div class="face-tweet">
                     <br>
                     <span><i class="fab fa-facebook-f"></i> Share</span>
-                    <span><i class="fab fa-twitter">tweet</i></span>
+                    <span><i class="fab fa-twitter">Tweet</i></span>
                     <br>
                 </div>
             </div>
@@ -160,7 +162,7 @@
         <div class="inbox-3">
             <p style="margin-bottom: 40px; font-weight: bold;">มีอะไรใหม่ ใน K2v2 ?</p>
             <p>Bluetooth 5.1</p>
-            <p>Inclined bottom frmae</p>
+            <p>Inclined bottom frame</p>
             <p>Dedicated caps lock backlight</p>
             <p>Hot-Swappable</p>
         </div>
@@ -170,14 +172,14 @@
             </div>
             <div class="swap-right">
                 <h1 style="margin-bottom: 20px;">Hot-Swappable</h1>
-                <p>Keychron K2 สามารถถอดและเปลี่ยน</p>
-                <p>สวิตช์ได้โดยที่ไม่ต้องบัดกรี (Soldering)</p>
-                <p>เพียงแค่ถอดสวิตช์ที่จะเปลี่ยนออกแล้วใส่</p>
-                <p>สวิตช์ใหม่ลงไปให้เข้าล็อก เพียงเท่านี้ก็</p>
-                <p>สามารถใช้งานต่อได้ในทันที Keychron K2</p>
-                <p>จึงทำให้ผู้ใช้งานสามารถเลือกผสมสวิตช์รูป</p>
-                <p>แบบต่าง ๆ ได้ง่าย สะดวก รวดเร็ว และปรับ</p>
-                <p>แต่งคีย์บอร์ดได้ตามความต้องการ</p>
+                <span>Keychron K2 สามารถถอดและเปลี่ยน
+                    สวิตช์ได้โดยที่ไม่ต้องบัดกรี (Soldering)
+                    เพียงแค่ถอดสวิตช์ที่จะเปลี่ยนออกแล้วใส่
+                    สวิตช์ใหม่ลงไปให้เข้าล็อก เพียงเท่านี้ก็
+                    สามารถใช้งานต่อได้ในทันที Keychron K2
+                    จึงทำให้ผู้ใช้งานสามารถเลือกผสมสวิตช์รูป
+                    แบบต่าง ๆ ได้ง่าย สะดวก รวดเร็ว และปรับ
+                    แต่งคีย์บอร์ดได้ตามความต้องการ</span>
             </div>
             <div class="pic-video">
                 <iframe width="100%" height="600px"
@@ -191,15 +193,14 @@
                 <img class="swap-pic" src="img/typegif.gif">
             </div>
             <div class="swap-right">
-                <h1>เชื่อมต่อไร้สาย และ USB -</h1>
-                <h1 style="margin-bottom: 20px;">C</h1>
-                <p>Keychron K2 สามารถใช้ได้ทั้งรูปแบบ</p>
-                <p>Bluetooth หรือ USB-C เชื่อมต่อ Iphone</p>
-                <p>Ipad และ Laptop ของคุณได้แบบไร้สาย</p>
-                <p>สูงสุด 3 อุปกรณ์พร้อมกัน สลับเครื่องแค่กด</p>
-                <p>ปุ่ม Fn + 1/2/3 และยังสามารถใช้ USB-C</p>
-                <p>เพื่อเชื่อมต่อ K2 กับอุปกรณ์ของคุณได้เช่น</p>
-                <p>กัน</p>
+                <h1 style="margin-bottom: 20px;"><b>เชื่อมต่อไร้สาย และ USB - C</b></h1>
+                <span>Keychron K2 สามารถใช้ได้ทั้งรูปแบบ
+                    Bluetooth หรือ USB-C เชื่อมต่อ Iphone
+                    Ipad และ Laptop ของคุณได้แบบไร้สาย
+                    สูงสุด 3 อุปกรณ์พร้อมกัน สลับเครื่องแค่กด
+                    ปุ่ม Fn + 1/2/3 และยังสามารถใช้ USB-C
+                    เพื่อเชื่อมต่อ K2 กับอุปกรณ์ของคุณได้เช่น
+                    กัน</span>
             </div>
             <div class="text-left" id="change-1">
                 <h1>สัมผัสแรงกดที่คุณ</h1>
@@ -381,14 +382,14 @@
                     <li>Copyright firstvisal⭐</li>
                 </div>
             </div>
-    
+
             <ul class="footer-info-items">
                 <li class="footer-info-item">Legal</li>
                 <li class="footer-info-item">Privacy</li>
                 <li class="footer-info-item">Policy</li>
                 <li class="footer-info-item">Cookies</li>
                 <li class="footer-info-item">Advertisement</li>
-    
+
             </ul>
         </div>
     </div>
@@ -396,21 +397,22 @@
 <script>
     var Product = document.getElementById("Product");
     var small = document.getElementsByClassName("small-img");
-    small[0].onclick = function () {
-        Product.src = small[0].src;
+    var demo = document.querySelectorAll(".li");
+    function box() {
+        demo.forEach(demo => demo.classList.remove('active'));
+        this.classList.add('active');
+        for (let i = 0; i <= 4; i++) {
+            small[i].onclick = function () {
+                Product.src = small[i].src;
+            }
+        }
     }
-    small[1].onclick = function () {
-        Product.src = small[1].src;
-    }
-    small[2].onclick = function () {
-        Product.src = small[2].src;
-    }
-    small[3].onclick = function () {
-        Product.src = small[3].src;
-    }
-    small[4].onclick = function () {
-        Product.src = small[4].src;
-    }
+    demo.forEach(demo => demo.addEventListener('click', box));
+    // for (let i = 0; i <= 4; i++) {
+    //     small[i].onclick = function () {
+    //         Product.src = small[i].src;
+    //     }
+    // }
 
     $(document).ready(function () {
         $('.minus').click(function () {
@@ -430,4 +432,4 @@
     });
 </script>
 
-</html> 
+</html>
