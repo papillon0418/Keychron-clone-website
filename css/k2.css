@@ -50,7 +50,7 @@
     list-style: none;
     width: 12%;
     height: 85px;
-    border: 2px solid white;
+    border: 1px solid white;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
@@ -61,7 +61,7 @@
     display: flex;
 } */
 .active{
-    border: 2px solid black;
+    border: 1px solid black;
 }
 .li img {
     width: 100%;
@@ -116,7 +116,7 @@ label.click span {
     padding: 10px;
     display: block;
     border: 2px solid #F2F2F1;
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: 10px;
     margin-right: 10px;
 }
