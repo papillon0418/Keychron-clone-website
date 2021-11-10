@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <title>Keychron K2</title>
-
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,41 @@
 </style>
 
 <body>
+    <div class="big-cart" id="big-cart2">
+        <div class="c-2" id="c-2" onclick="Change()"></div>
+        <div class="cart" id="c-cart">
+            <div class="head-cart">
+                <h1>Cart</h1>
+                <h5><i class="fa fa-times" aria-hidden="true" onclick="Change()"></i></h5>
+            </div>
+            <hr class="hr-cart">
+            <div class="detail-cart">
+                <div class="left-cart">
+                    <div id="img-cart-add" class="img-add"></div>
+                </div>
+                <div class="right-cart">
+                    <div id="detail-add" class="detail-add-cart">
+                        <p id="de-cart"></p>
+                    </div>
+
+                    <div class="price-cart-b">
+                        <div class="number-cart">
+                            <span class="minus" id="min">-</span>
+                            <input class="quan" id="number" type="text" value="1" />
+                            <span class="plus" id="plux">+</span>
+                        </div>
+                        <span id="price-cart"></span>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-cart">
+            <div class="sub-cart">
+                <h4>SUBTOTAL</h4>
+                <p>Shipping, taxes, and discounts codes calculated at checkout.</p>
+                <button>checkout</button>
+            </div>
+        </div>
+    </div>
     <div class="covidTxt">
         <p>เนื่องจากสถานการณ์เเพร่ระบาดของโรค COVID-19 ส่งผลกระทบต่อการเดินทางขนส่งสินค้า
             ทําให้การจัดส่งสินค้าถึงปลายทางล่าช้ากว่าปกติ
@@ -80,7 +115,7 @@
         <div class="icons">
             <a href="login.html"><i class="far fa-user" href="login.html"></i></a>
             <a href="#"><i class="fas fa-search"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" onclick="On()"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </div>
     <div class="kan">
@@ -88,12 +123,14 @@
     </div>
     <div class="b-box">
         <div class="pic">
+            <div class="li">
+                <div class="d active" id="demo"><img class="small-img" src="img/k2-01.png"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k2-blue-black.png"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k2-brown.png"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k2-red.png"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k2-bblue.png"></div>
+            </div>
             <ul><img src="img/k2-01.png" id="Product"></ul>
-            <div class="li active" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-01.png"></div>
-            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-blue-black.png"></div>
-            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-brown.png"></div>
-            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-red.png"></div>
-            <div class="li" onclick="Change(this)" id="demo"><img class="small-img" src="img/k2-bblue.png"></div>
         </div>
         <div class="detail">
             <h2>Keychron K2 V.2 Wireless Hot-swappable Mechanical Keyboard
@@ -108,36 +145,50 @@
             <div class="btn-ver">
                 <div class="ver">
                     <h6>รุ่นสี</h6>
-                    <label class="click"><input type="radio" name="group-1"><span>RGB Backlight Aluminum Frame
+                    <label class="click"><input checked="checked" type="radio" name="group-1" value="RGB Backlight Aluminum
+                        Frame
+                        Hot-Swappable - Dark Grey"><span>RGB Backlight Aluminum
+                            Frame
                             Hot-Swappable - Dark Grey</span></label>
-                    <label class="click"><input type="radio" name="group-1"><span>RGB Backlight Aluminum Frame
+                    <label class="click"><input type="radio" name="group-1" value="RGB Backlight Aluminum
+                        Frame
+                        Hot-Swappable - Light Grey"><span>RGB Backlight Aluminum
+                            Frame
                             Hot-Swappable - Light Grey</span></label>
                 </div>
                 <div class="switch">
                     <h6>สวิตซ์</h6>
-                    <label class="click"><input type="radio" name="group-2"><span>Gateron Red Switch</span></label>
-                    <label class="click"><input type="radio" name="group-2"><span>Gateron Blue Switch</span></label><br>
-                    <label class="click"><input type="radio" name="group-2"><span>Gateron Brown Switch</span></label>
+                    <label class="click"><input type="radio" checked="checked" name="group-2" value="Gateron Red
+                        Switch"><span>Gateron Red
+                            Switch</span></label>
+                    <label class="click"><input type="radio" name="group-2" value="Gateron Blue
+                        Switch"><span>Gateron Blue
+                            Switch</span></label><br>
+                    <label class="click"><input type="radio" name="group-2" value="Gateron Brown
+                        Switch"><span>Gateron Brown
+                            Switch</span></label>
                 </div>
                 <div class="lang">
                     <h6>ภาษาคีย์บอร์ด</h6>
-                    <label class="click"><input type="radio" name="group-3"><span>ภาษาอังกฤษ</span></label>
-                    <label class="click"><input type="radio" name="group-3"><span>ภาษาไทย</span></label>
+                    <label class="click"><input checked="checked" type="radio" name="group-3"
+                            value="ภาษาอังกฤษ"><span>ภาษาอังกฤษ</span></label>
+                    <label class="click"><input type="radio" name="group-3" value="ภาษาไทย"><span>ภาษาไทย</span></label>
                 </div>
                 <h6>QUANTITY</h6>
                 <div class="number">
                     <span class="minus">-</span>
                     <input class="quan" type="text" value="1" />
                     <span class="plus">+</span>
+                </div><br>
+                <div>
+                    <button class="sold" onclick="cart()">add to cart</button>
+                    <br><br><br>
                 </div>
-                <button class="sold">Sold Out</button>
-                <button class="noti">เตือนฉันเมื่อสินค้าพร้อมจำหน่าย</button>
                 <hr>
                 <div class="face-tweet">
                     <br>
                     <span><i class="fab fa-facebook-f"></i> Share</span>
                     <span><i class="fab fa-twitter">Tweet</i></span>
-                    <br>
                 </div>
             </div>
         </div>
@@ -397,7 +448,7 @@
 <script>
     var Product = document.getElementById("Product");
     var small = document.getElementsByClassName("small-img");
-    var demo = document.querySelectorAll(".li");
+    var demo = document.querySelectorAll(".d");
     function box() {
         demo.forEach(demo => demo.classList.remove('active'));
         this.classList.add('active');
@@ -430,6 +481,86 @@
             return false;
         });
     });
+    const num = 0;
+    function On(){
+        var x = document.getElementById("c-cart");
+        var y = document.getElementById("c-2");
+        x.classList.add("animate-cart");
+        y.classList.add("go-left");
+        x.classList.remove("move-out-right");
+        y.classList.remove("move-out-left");
+    }
+    function cart() {
+        num++;
+        var hr = document.createElement("hr");
+        var box = document.getElementById('z');
+        var pic = document.getElementById("img-cart-add");
+        var ele = document.createElement("img");
+        var big = document.getElementById("big-cart2");
+        var head = document.getElementById("de-cart");
+        var text = document.createTextNode("Keychron K2 V.2 Wireless Hot-swappable Mechanical Keyboard");
+        var g1 = document.getElementsByName('group-1');
+        var g2 = document.getElementsByName('group-2');
+        var g3 = document.getElementsByName('group-3');
+        head.appendChild(text);
+        var x = document.getElementById("c-cart");
+        var y = document.getElementById("c-2");
+        x.classList.add("animate-cart");
+        y.classList.add("go-left");
+        x.classList.remove("move-out-right");
+        y.classList.remove("move-out-left");
+        for (var i = 0; i < g1.length; i++) {
+            if (g1[i].checked)
+                document.getElementById("detail-add").innerHTML
+                    += g1[i].value + " / ";
+        }
+        for (var i = 0; i < g2.length; i++) {
+            if (g2[i].checked)
+                document.getElementById("detail-add").innerHTML
+                    += g2[i].value + " / ";
+        }
+        for (var i = 0; i < g3.length; i++) {
+            if (g3[i].checked)
+                document.getElementById("detail-add").innerHTML
+                    += g3[i].value;
+        }
+        document.getElementById("price-cart").innerHTML
+            += "3,890.00 B";
+        // hr.classList.add('hr-cart');
+        // box.appendChild(hr);
+        if (g1[0].checked && g2[0].checked && g3[0].checked) {
+            ele.src = "img/k2-red.png";
+            pic.appendChild(ele);
+        }
+        else if (g1[0].checked && g2[1].checked) {
+            ele.src = "img/k2-blue-black.png";
+            pic.appendChild(ele);
+        }
+        else if (g1[0].checked && g2[2].checked) {
+            ele.src = "img/k2-brown.png";
+            pic.appendChild(ele);
+        }
+        else if (g1[1].checked && g2[0].checked) {
+            ele.src = "img/red-li.jpg";
+            pic.appendChild(ele);
+        }
+        else if (g1[1].checked && g2[1].checked) {
+            ele.src = "img/k2-bblue.png";
+            pic.appendChild(ele);
+        }
+        else if (g1[1].checked && g2[2].checked) {
+            ele.src = "img/brown-li.jpg";
+            pic.appendChild(ele);
+        }
+    }
+    function Change() {
+        var x = document.getElementById("c-cart");
+        var y = document.getElementById("c-2");
+        x.classList.add("move-out-right");
+        y.classList.add("move-out-left");
+        x.classList.remove("animate-cart");
+        y.classList.remove("go-left");
+    }
 </script>
 
 </html>
