@@ -22,60 +22,199 @@
 .covidTxt p:hover {
     color: #fff;
 }
+/* ---------------Cart---------------- */
+.hr-cart{
+    border: 0.5px solid #eeeeee;
+    width: 85%;
+}
+.big-cart{
+    display: flex;
+    position: relative;
+    /* background-color: #DDBEBE; */
+}
+.c-2{
+    left: -1000px;
+    position: fixed;
+    z-index: 9999;
+    background-color: #393E46; /* Black w/ opacity */
+    opacity: 0.4;
+    width: 70%;
+    height: 100vh;
+    /* border: 2px solid green; */
+    display: flex;
+    transition: 1s;
+    transition: 1s;
+}
+.cart{
+    right: -1000px;
+    position: fixed;
+    background-color: white;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+}
+.head-cart{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    align-items: center;
+}
+.head-cart,.detail-cart,.sub-cart{
+    width: 85%;
+}
+.detail-cart{
+    display: flex;
+    /* border: 2px solid red; */
+    height: 55%;
+    justify-content: flex-end;
+}
+.left-cart{
+    width: 40%;
+    height: auto;
+    /* border: 1px solid blue; */
+}
+.img-add{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid red; */
+}
+.img-add img{
+    width: 100%;
+    height: auto;
+}
+.right-cart{
+    width: 58%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+.detail-add-cart{
+    position: relative;
+    height: auto;
+    width: 100%;
+    /* border: 2px solid blueviolet; */
+}
+.price-cart-b{
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.number-cart{
+    /* border: 2px solid blueviolet; */
+    position: relative;
+    display: flex;
+    width: 45%;
+}
+#price-cart{
+    position: relative;
+    font-size: 15px;
+}
+#min,#number,#plux{
+    height: 4vh;
+}
+/* ---------------animate-cart--------------- */
+.animate-cart{
+    animation: move 1s forwards;
+}
+@keyframes move{
+    100%{
+        right: 0;
 
+    }
+
+}
+.go-left{
+    animation: to-left 1s forwards;
+}
+@keyframes to-left{
+    100%{
+        left: 0;
+
+    }
+}
+.move-out-right{
+    animation: move-out-r 1s;
+}
+@keyframes move-out-r{
+    0%{
+        right: 0;
+    }
+    100%{
+        right: -30%;
+        transition: 1s;
+    }
+}
+.move-out-left{
+    animation: move-out-l 1s;
+}
+@keyframes move-out-l{
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -70%;
+        transition: 1s;
+    }
+}
 /*---------------product--------------- */
 .b-box {
     width: 100%;
-    height: 1020px;
+    height: 980px;
     /* border: 5px solid blue; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    /* align-items: center; */
     position: relative;
 }
 
 .pic {
     display: flex;
-    flex-direction: column;
-    top: 20px;
-    width: 45%;
-    position: absolute;
+    /* flex-direction: column; */
+    margin-bottom: 0;
+    width: 50%;
+    position: relative;
     /* border: 1px solid green; */
-    left: 7%;
     height: 500px;
+    justify-content: space-around;
 }
 
 .li {
-    margin-left: 20px;
     list-style: none;
     width: 12%;
-    height: 85px;
-    border: 1px solid white;
-    margin-bottom: 20px;
+    height: auto;
+    /* border: 1px solid red; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
 
+}
+.d {
+    border: 2px solid white;
 }
 /* li:hover ul{
     display: flex;
 } */
 .active{
-    border: 1px solid black;
+    border: 2px solid black;
 }
-.li img {
+
+.d img {
     width: 100%;
     height: 100%;
     cursor: pointer;
 }
 
 ul {
-    width: 460px;
-    height: 85%;
-    position: absolute;
-    top: 10%;
-    right: 50px;
-    display: flex;
+    width: 500px;
+    height: 500px;
     /* border: 1px solid red; */
 
 }
@@ -86,8 +225,7 @@ ul img {
 }
 
 .detail {
-    position: absolute;
-    right: 5%;
+    position: relative;
     /* border: 2px solid red; */
     width: 40%;
     height: 100%;
@@ -96,6 +234,9 @@ ul img {
 .btn-ver {
     /* justify-content: space-around; */
     width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     /* border: 2px solid green; */
 }
 
@@ -123,58 +264,54 @@ label.click span {
 
 label.click input:checked+span {
     border: 2px solid black;
-    background-color: #EEEEEC;
+    background-color: rgba(234, 237, 236,0.5);
 
 }
 
 /* -------------------------------- */
-
-.plus {
-    left: 90px;
-}
-
-.minus {
-    left: 0;
-}
-
 .minus,
 .plus {
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     border: 1px solid gray;
-    position: absolute;
-    display: grid;
-    width: 20px;
-    height: 45px;
-    text-align: center;
-    align-items: center;
-}
+    width: 20%;
+    height: 6.5vh;
 
+}
+.quan {
+    text-align: center;
+    width: 70%;
+    border: 1px solid gray;
+    height: 6.5vh;
+    font-size: 20px;
+}
 .number {
     /* border: 2px solid red; */
     position: relative;
-    width: 100%;
-    height: 60px;
-}
-
-.quan {
-    width: 70px;
-    border: 1px solid gray;
-    position: absolute;
-    height: 45px;
-    left: 20px;
+    width: 20%;
+    display: flex;
     text-align: center;
     align-items: center;
-    font-size: 20px;
 }
 /* -------------------------------- */
 .sold {
+    background-color: white;
     margin-top: 20px;
     margin-bottom: 10px;
     width: 100%;
     height: 55px;
+    border: 1px solid grey;
 }
-
+.sold:focus{
+    background-color: black;
+    color: white;
+}
+.sold:visited{
+    background-color: white;
+    color: black;
+}
 .noti {
     width: 90%;
     position: relative;
