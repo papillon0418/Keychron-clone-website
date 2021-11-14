@@ -28,6 +28,7 @@
     <div class="big-cart" id="big-cart2">
         <div class="c-2" id="c-2" onclick="Change()"></div>
         <div class="cart" id="c-cart">
+            <br>
             <div class="head-cart">
                 <h1>Cart</h1>
                 <h5><i class="fa fa-times" aria-hidden="true" onclick="Change()"></i></h5>
@@ -54,10 +55,15 @@
             </div>
             <hr class="hr-cart">
             <div class="sub-cart">
-                <h4>SUBTOTAL</h4>
+                <input type="checkbox"><label>&nbsp; ฉันยอมรับข้อตกลงและเงื่อนไข ฯ</label>
+                <div class="sub-total">
+                    <h5><b>SUBTOTAL</b></h5>
+                    <h5 id="total"></h5>
+                </div>
                 <p>Shipping, taxes, and discounts codes calculated at checkout.</p>
                 <button>checkout</button>
             </div>
+            <br>
         </div>
     </div>
     <div class="covidTxt">
@@ -462,12 +468,18 @@
     //         Product.src = small[i].src;
     //     }
     // }
-
+    var num_item = 1;
+    var price_total = 3890;
+    let boxx = 0;
     $(document).ready(function () {
         $('.minus').click(function () {
             var $input = $(this).parent().find('input');
             var count = parseInt($input.val()) - 1;
             count = count < 1 ? 1 : count;
+            num_item -= 1;
+            if (num_item <= 0) {
+                num_item = 1;
+            }
             $input.val(count);
             $input.change();
             return false;
@@ -476,6 +488,7 @@
             var $input = $(this).parent().find('input');
             $input.val(parseInt($input.val()) + 1);
             $input.change();
+            num_item += 1;
             return false;
         });
     });
@@ -505,6 +518,7 @@
         var br = document.createElement("br");
         var hr = document.createElement("hr");
         var big_box = document.createElement("div");
+
         big_box.classList.add("detail-cart");
         big_box.id = "detail-big";
         mid.appendChild(big_box);
@@ -512,7 +526,7 @@
         var div_detail = document.createElement("div");
         var div_price = document.createElement("div");
         var div_input = document.createElement("div");
-        var ptag = document.createElement("p");
+        var ptag = document.createElement("h5");
         var ptag2 = document.createElement("p");
         var price = document.createElement("span");
         var big_right = document.createElement("div");
@@ -558,17 +572,54 @@
             }
         }
         // ---------------------cal---------------------- //
+        // $(document).ready(function () {
+        //     $('.num2').prop('disabled', true);
+        //     $(document).on('click', '.plux', function () {
+        //         $('.num2').val(parseInt($('.num2').val()) + 1);
+        //     });
+        //     $(document).on('click', '.min', function () {
+        //         $('.num2').val(parseInt($('.num2').val()) - 1);
+        //         if ($('.num2').val() == 0) {
+        //             $('.num2').val(1);
+        //             big_box.remove();
+        //         }
+        //     });
+        // });
+        boxx += num_item * price_total;
+        var total = document.getElementById("total");
+        total.innerHTML = boxx;
+        var numt = 0;
+        // var nump = num_item;
         $(document).ready(function () {
-            $('.num2').prop('disabled', true);
-            $(document).on('click', '.plux', function () {
-                $('.num2').val(parseInt($('.num2').val()) + 1);
-            });
-            $(document).on('click', '.min', function () {
-                $('.num2').val(parseInt($('.num2').val()) - 1);
-                if ($('.num2').val() == 0) {
-                    $('.num2').val(1);
+            $('.min').click(function () {
+                var $input = $(this).parent().find('input');
+                var num = parseInt($input.val()) - 1;
+                // if (num_item <= 0) {
+                //     num_item = 1;
+                // }
+                num_item -= 1;
+                if (num_item <= 0) {
                     big_box.remove();
+                    num_item = 1;
                 }
+                $input.val(num);
+                $input.change();
+                boxx -= num*price_total;
+                total.innerHTML = boxx;
+                return false;
+            });
+            $('.plux').click(function () {
+                var $input = $(this).parent().find('input');
+                var num = parseInt($input.val()) + 1;
+                num_item += 1;
+                $input.val(num);
+                $input.change();
+                // if (num == 0) {
+                //     big_box.remove();
+                // }
+                boxx += num*price_total;
+                total.innerHTML = boxx;
+                return false;
             });
         });
         //--------------------ทำปุ่มเพิ่มของ--------------------//
@@ -581,7 +632,7 @@
         oper2.classList.add("plux");
         amount.classList.add("num2");
         amount.type = "text";
-        amount.value = "1";
+        amount.value = num_item;
         oper1.appendChild(mm);
         oper2.appendChild(pp);
         div_input.appendChild(oper1);
@@ -627,6 +678,7 @@
         }
         big_box.appendChild(cart_left);
         big_box.appendChild(big_right);
+
     }
     function Change() {
         var x = document.getElementById("c-cart");
