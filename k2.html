@@ -33,23 +33,21 @@
                 <h5><i class="fa fa-times" aria-hidden="true" onclick="Change()"></i></h5>
             </div>
             <hr class="hr-cart">
-            <div class="detail-cart" id="detailCart">
+            <div class="detail-cart">
                 <div class="left-cart">
                     <div id="img-cart-add" class="img-add"></div>
                 </div>
-                <div class="right-cart">
-                    <div id="detail-add" class="detail-add-cart">
+                <div class="right-cart" id="cart-right">
+                    <!-- <div id="detail-add" class="detail-add-cart">
                         <p id="de-cart"></p>
-                    </div>
+                        <p id="item-value"</p>
+                        <div class="price-cart-b">
+                            <div class="number-cart" id="num-box">
 
-                    <div class="price-cart-b">
-                        <div class="number-cart">
-                            <span class="minus" id="min" onclick="removed()">-</span>
-                            <input class="quan" id="number" type="text" value="1" />
-                            <span class="plus" id="plux">+</span>
+                            </div>
+                            <span id="price-cart"></span>
                         </div>
-                        <span id="price-cart"></span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <hr class="hr-cart">
@@ -66,18 +64,16 @@
         </p>
     </div>
     <div class="nav-container">
-         <a href="index.html"> 
-            <div class="logo">
-                <img src="img/keychronlogo.png" alt="">
-            </div>
-        </a>
+        <div class="logo">
+            <img src="img/keychronlogo.png" alt="">
+        </div>
         <div class="keyboards">
             <button>Keyboard <i class="fas fa-chevron-down"></i></button>
             <ul>
                 <li><a href="k2.html">Keychron K2</a></li>
-                <li><a href="k4.html">Keychron K4</a></li>
-                <li><a href="#">Keychron K6</a></li>
-                <li><a href="#">Keychron K8</a></li>
+                <li><a href="#">Keychron K4</a></li>
+                <li><a href="#">Keychron K2</a></li>
+                <li><a href="#">Keychron K4</a></li>
             </ul>
         </div>
         <div class="slimKeyboards">
@@ -149,14 +145,12 @@
                     <h6>รุ่นสี</h6>
                     <label class="click"><input checked="checked" type="radio" name="group-1" value="RGB Backlight Aluminum
                         Frame
-                        Hot-Swappable - Dark Grey"><span>RGB Backlight Aluminum
-                            Frame
-                            Hot-Swappable - Dark Grey</span></label>
+                        Hot-Swappable - Dark Grey"><span>RGB Backlight Aluminum Frame Hot-Swappable - Dark
+                            Grey</span></label>
                     <label class="click"><input type="radio" name="group-1" value="RGB Backlight Aluminum
                         Frame
-                        Hot-Swappable - Light Grey"><span>RGB Backlight Aluminum
-                            Frame
-                            Hot-Swappable - Light Grey</span></label>
+                        Hot-Swappable - Light Grey"><span>RGB Backlight Aluminum Frame Hot-Swappable - Light
+                            Grey</span></label>
                 </div>
                 <div class="switch">
                     <h6>สวิตซ์</h6>
@@ -432,7 +426,7 @@
             <div class="rights">
                 <div class="country">
                     <li>Thailand (TH)</li>
-                    <li>Webtech 2021⭐</li>
+                    <li>Copyright firstvisal⭐</li>
                 </div>
             </div>
 
@@ -483,8 +477,19 @@
             return false;
         });
     });
-    const num = 0;
-    function On(){
+    $(document).ready(function () {
+        $('.num2').prop('disabled', true);
+        $(document).on('click', '.plux', function () {
+            $('.num2').val(parseInt($('.num2').val()) + 1);
+        });
+        $(document).on('click', '.min', function () {
+            $('.num2').val(parseInt($('.num2').val()) - 1);
+            if ($('.num2').val() == 0) {
+                $('.num2').val(1);
+            }
+        });
+    });
+    function On() {
         var x = document.getElementById("c-cart");
         var y = document.getElementById("c-2");
         x.classList.add("animate-cart");
@@ -493,42 +498,91 @@
         y.classList.remove("move-out-left");
     }
     function cart() {
-        var hr = document.createElement("hr");
-        var box = document.getElementById('z');
-        var pic = document.getElementById("img-cart-add");
-        var ele = document.createElement("img");
-        var big = document.getElementById("big-cart2");
-        var head = document.getElementById("de-cart");
-        var text = document.createTextNode("Keychron K2 V.2 Wireless Hot-swappable Mechanical Keyboard");
-        var g1 = document.getElementsByName('group-1');
-        var g2 = document.getElementsByName('group-2');
-        var g3 = document.getElementsByName('group-3');
-        head.appendChild(text);
+        // slideeeeeeeeeeeeeeeeeeeeeeeeeeeee //
         var x = document.getElementById("c-cart");
         var y = document.getElementById("c-2");
         x.classList.add("animate-cart");
         y.classList.add("go-left");
         x.classList.remove("move-out-right");
         y.classList.remove("move-out-left");
+        // close - slideeeeeeeeeeeeeeeeeeeeeeeeeeeee //
+        var text = document.createTextNode("Keychron K2 V.2 Wireless Hot-swappable Mechanical Keyboard");
+        var g1 = document.getElementsByName('group-1');
+        var g2 = document.getElementsByName('group-2');
+        var g3 = document.getElementsByName('group-3');
+        var br = document.createElement("br");
+        // create box inner right-cart //
+        var div_detail = document.createElement("div");
+        var div_price = document.createElement("div");
+        var div_input = document.createElement("div");
+        var ptag = document.createElement("p");
+        var ptag2 = document.createElement("p");
+        var price = document.createElement("span");
+        var big_right = document.getElementById("cart-right");
+        big_right.appendChild(div_detail);
+        ptag.id = "de-cart";
+        price.id = "price-cart";
+        ptag2.id = "item-value"
+        ptag.appendChild(text);
+        div_detail.classList.add("detail-add-cart");
+        div_detail.id = "detail-add";
+        div_price.classList.add("price-cart-b");
+        div_input.classList.add("number-cart")
+        div_input.id = "num-box";
+        div_price.appendChild(div_input);
+        div_price.appendChild(price);
+        div_detail.appendChild(ptag);
+        div_detail.appendChild(ptag2);
+        div_detail.appendChild(div_price);
+        div_detail.appendChild(br);
+        //
+        // create box inner right-cart //
         for (var i = 0; i < g1.length; i++) {
-            if (g1[i].checked)
-                document.getElementById("detail-add").innerHTML
-                    += g1[i].value + " / ";
+            if (g1[i].checked) {
+                var text = g1[i].value;
+                var t = document.createTextNode(text);
+                ptag2.appendChild(t);
+            }
         }
         for (var i = 0; i < g2.length; i++) {
-            if (g2[i].checked)
-                document.getElementById("detail-add").innerHTML
-                    += g2[i].value + " / ";
+            if (g2[i].checked) {
+                var text = g2[i].value;
+                var t = document.createTextNode(text);
+                ptag2.appendChild(t);
+            }
         }
         for (var i = 0; i < g3.length; i++) {
-            if (g3[i].checked)
-                document.getElementById("detail-add").innerHTML
-                    += g3[i].value;
+            if (g3[i].checked) {
+                var text = g3[i].value;
+                var t = document.createTextNode(text);
+                ptag2.appendChild(t);
+            }
         }
-        document.getElementById("price-cart").innerHTML
-            += "3,890.00 B";
+
+        //--------------------ทำปุ่มเพิ่มของ--------------------//
+        var oper1 = document.createElement("span");
+        var oper2 = document.createElement("span");
+        var amount = document.createElement("input");
+        var pp = document.createTextNode("+");
+        var mm = document.createTextNode("-");
+        oper1.classList.add("min");
+        oper2.classList.add("plux");
+        amount.classList.add("num2");
+        amount.type = "text";
+        amount.value = "1";
+        oper1.appendChild(mm);
+        oper2.appendChild(pp);
+        div_input.appendChild(oper1);
+        div_input.appendChild(amount);
+        div_input.appendChild(oper2);
+        //--------------------ทำปุ่มเพิ่มของ--------------------//
+        var p_price = document.createTextNode("3,890.00 B")
+        price.appendChild(p_price);
         // hr.classList.add('hr-cart');
         // box.appendChild(hr);
+        // ----------------------pic-------------------- //
+        var pic = document.getElementById("img-cart-add");
+        var ele = document.createElement("img");
         if (g1[0].checked && g2[0].checked && g3[0].checked) {
             ele.src = "img/k2-red.png";
             pic.appendChild(ele);
@@ -561,11 +615,6 @@
         y.classList.add("move-out-left");
         x.classList.remove("animate-cart");
         y.classList.remove("go-left");
-    }
-    
-    function removed() {
-        var erase = document.getElementsById("detailCart");
-        erase.remove();
     }
 </script>
 
