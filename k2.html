@@ -44,7 +44,7 @@
 
                     <div class="price-cart-b">
                         <div class="number-cart">
-                            <span class="minus" id="min">-</span>
+                            <span class="minus" id="min" onclick="remove()">-</span>
                             <input class="quan" id="number" type="text" value="1" />
                             <span class="plus" id="plux">+</span>
                         </div>
@@ -559,6 +559,11 @@
         y.classList.add("move-out-left");
         x.classList.remove("animate-cart");
         y.classList.remove("go-left");
+    }
+    
+    function remove() {
+        var erase = document.getElementsByClassName("detail-cart");
+        erase.remove();
     }
 </script>
 
