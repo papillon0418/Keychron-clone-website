@@ -479,18 +479,7 @@
             return false;
         });
     });
-    $(document).ready(function () {
-        $('.num2').prop('disabled', true);
-        $(document).on('click', '.plux', function () {
-            $('.num2').val(parseInt($('.num2').val()) + 1);
-        });
-        $(document).on('click', '.min', function () {
-            $('.num2').val(parseInt($('.num2').val()) - 1);
-            if ($('.num2').val() == 0) {
-                $('.num2').val(1);
-            }
-        });
-    });
+
     function On() {
         var x = document.getElementById("c-cart");
         var y = document.getElementById("c-2");
@@ -568,7 +557,20 @@
                 ptag2.appendChild(t);
             }
         }
-
+        // ---------------------cal---------------------- //
+        $(document).ready(function () {
+            $('.num2').prop('disabled', true);
+            $(document).on('click', '.plux', function () {
+                $('.num2').val(parseInt($('.num2').val()) + 1);
+            });
+            $(document).on('click', '.min', function () {
+                $('.num2').val(parseInt($('.num2').val()) - 1);
+                if ($('.num2').val() == 0) {
+                    $('.num2').val(1);
+                    big_box.remove();
+                }
+            });
+        });
         //--------------------ทำปุ่มเพิ่มของ--------------------//
         var oper1 = document.createElement("span");
         var oper2 = document.createElement("span");
