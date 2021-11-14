@@ -588,6 +588,14 @@ iframe{
     margin: auto;
 }
 
+.keyboards,
+.slimKeyboards,
+.accessories,
+.switch,
+.blog{
+    margin: 1em;
+} 
+
 .keyboards ul,
 .slimKeyboards ul,
 .accessories ul,
