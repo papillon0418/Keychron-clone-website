@@ -33,7 +33,7 @@
     display: flex;
     position: relative;
     background-color: #393E46; /* Black w/ opacity */
-    border: 2px solid  red;
+    border: 2px solid rgb(0, 0, 0);
 }
 .c-2{
     right: -200%;
