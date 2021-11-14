@@ -33,7 +33,7 @@
                 <h5><i class="fa fa-times" aria-hidden="true" onclick="Change()"></i></h5>
             </div>
             <hr class="hr-cart">
-            <div class="detail-cart">
+            <div class="detail-cart" id="detailCart">
                 <div class="left-cart">
                     <div id="img-cart-add" class="img-add"></div>
                 </div>
@@ -562,7 +562,7 @@
     }
     
     function remove() {
-        var erase = document.getElementsByClassName("detail-cart");
+        var erase = document.getElementsById("detailCart");
         erase.remove();
     }
 </script>
