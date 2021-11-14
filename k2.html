@@ -33,12 +33,13 @@
                 <h5><i class="fa fa-times" aria-hidden="true" onclick="Change()"></i></h5>
             </div>
             <hr class="hr-cart">
-            <div class="detail-cart">
+            <div id="mid">
+                <!-- <div class="detail-cart" id="detail-big">
                 <div class="left-cart">
                     <div id="img-cart-add" class="img-add"></div>
                 </div>
                 <div class="right-cart" id="cart-right">
-                    <!-- <div id="detail-add" class="detail-add-cart">
+                    <div id="detail-add" class="detail-add-cart">
                         <p id="de-cart"></p>
                         <p id="item-value"</p>
                         <div class="price-cart-b">
@@ -47,8 +48,9 @@
                             </div>
                             <span id="price-cart"></span>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
+            </div> -->
             </div>
             <hr class="hr-cart">
             <div class="sub-cart">
@@ -510,7 +512,13 @@
         var g1 = document.getElementsByName('group-1');
         var g2 = document.getElementsByName('group-2');
         var g3 = document.getElementsByName('group-3');
+        var mid = document.getElementById("mid");
         var br = document.createElement("br");
+        var hr = document.createElement("hr");
+        var big_box = document.createElement("div");
+        big_box.classList.add("detail-cart");
+        big_box.id = "detail-big";
+        mid.appendChild(big_box);
         // create box inner right-cart //
         var div_detail = document.createElement("div");
         var div_price = document.createElement("div");
@@ -518,7 +526,9 @@
         var ptag = document.createElement("p");
         var ptag2 = document.createElement("p");
         var price = document.createElement("span");
-        var big_right = document.getElementById("cart-right");
+        var big_right = document.createElement("div");
+        big_right.classList.add("right-cart");
+        big_right.id = "cart-right";
         big_right.appendChild(div_detail);
         ptag.id = "de-cart";
         price.id = "price-cart";
@@ -581,9 +591,15 @@
         // hr.classList.add('hr-cart');
         // box.appendChild(hr);
         // ----------------------pic-------------------- //
-        var pic = document.getElementById("img-cart-add");
+        var cart_left = document.createElement("div");
+        cart_left.classList.add("left-cart");
+        var pic = document.createElement("div");
+        pic.classList.add("img-add");
+        pic.id = "img-cart-add";
+        cart_left.appendChild(pic);
+        // var pic = document.getElementById("img-cart-add");
         var ele = document.createElement("img");
-        if (g1[0].checked && g2[0].checked && g3[0].checked) {
+        if (g1[0].checked && g2[0].checked) {
             ele.src = "img/k2-red.png";
             pic.appendChild(ele);
         }
@@ -607,6 +623,8 @@
             ele.src = "img/brown-li.jpg";
             pic.appendChild(ele);
         }
+        big_box.appendChild(cart_left);
+        big_box.appendChild(big_right);
     }
     function Change() {
         var x = document.getElementById("c-cart");
