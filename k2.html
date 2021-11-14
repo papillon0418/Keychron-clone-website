@@ -53,15 +53,15 @@
                 </div>
             </div> -->
             </div>
-            <hr class="hr-cart">
-            <div class="sub-cart">
+            <hr class="hr-cart" id="line1">
+            <div class="sub-cart" id="sub1">
                 <input type="checkbox"><label>&nbsp; ฉันยอมรับข้อตกลงและเงื่อนไข ฯ</label>
                 <div class="sub-total">
                     <h5><b>SUBTOTAL</b></h5>
                     <h5 id="total"></h5>
                 </div>
                 <p>Shipping, taxes, and discounts codes calculated at checkout.</p>
-                <button>checkout</button>
+                <button class="checkout">check out</button>
             </div>
             <br>
         </div>
@@ -72,11 +72,9 @@
         </p>
     </div>
     <div class="nav-container">
-       <a href="index.html">
-            <div class="logo">
-                <img src="img/keychronlogo.png" alt="">
-            </div>
-        </a>
+        <div class="logo">
+            <img src="img/keychronlogo.png" alt="">
+        </div>
         <div class="keyboards">
             <button>Keyboard <i class="fas fa-chevron-down"></i></button>
             <ul>
@@ -473,6 +471,7 @@
     var num_item = 1;
     var price_total = 3890;
     let boxx = 0;
+    var numt =  0;
     $(document).ready(function () {
         $('.minus').click(function () {
             var $input = $(this).parent().find('input');
@@ -555,14 +554,14 @@
         for (var i = 0; i < g1.length; i++) {
             if (g1[i].checked) {
                 var text = g1[i].value;
-                var t = document.createTextNode(text);
+                var t = document.createTextNode(text+" / ");
                 ptag2.appendChild(t);
             }
         }
         for (var i = 0; i < g2.length; i++) {
             if (g2[i].checked) {
                 var text = g2[i].value;
-                var t = document.createTextNode(text);
+                var t = document.createTextNode(text+" / ");
                 ptag2.appendChild(t);
             }
         }
@@ -587,9 +586,8 @@
         //         }
         //     });
         // });
-        
-        // var nump = num_item;
-        
+
+
         //--------------------ทำปุ่มเพิ่มของ--------------------//
         var oper1 = document.createElement("span");
         var oper2 = document.createElement("span");
@@ -671,11 +669,12 @@
         //     });
         // });
         // --------------------------------close cal -------------------------- //
-        
+
         var p_price = document.createTextNode("3,890.00 B")
         price.appendChild(p_price);
- 
+
         // ----------------------pic-------------------- //
+
         var cart_left = document.createElement("div");
         cart_left.classList.add("left-cart");
         var pic = document.createElement("div");
