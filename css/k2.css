@@ -749,7 +749,7 @@ iframe{
     width: 60%;
     padding: 50px 0;
     /* border: 2px solid black; */
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #footer .footer-content .footer-menu{
