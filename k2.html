@@ -587,67 +587,94 @@
         //         }
         //     });
         // });
-        boxx += num_item * price_total;
-        var total = document.getElementById("total");
-        total.innerHTML = boxx;
-        var numt = num_item;
+        
         // var nump = num_item;
-        $(document).ready(function () {
-            $('.min').click(function () {
-                var $input = $(this).parent().find('input');
-                var num = parseInt($input.val()) - 1;
-                // if (num_item <= 0) {
-                //     num_item = 1;
-                // }
-                numt -= 1;
-                if (numt <= 0) {
-                    big_box.remove();
-                    numt = 1;
-                }
-                $input.val(numt);
-                $input.change();
-                // numt = (num)*price_total;
-                boxx -= 3890;
-                // boxx -=
-                total.innerHTML = boxx;
-                return false;
-            });
-            $('.plux').click(function () {
-                var $input = $(this).parent().find('input');
-                var num = parseInt($input.val()) + 1;
-                numt += 1;
-                $input.val(numt);
-                $input.change();
-                // if (num == 0) {
-                //     big_box.remove();
-                // }
-                // numt = (num)*price_total;
-                boxx += 3890;
-                total.innerHTML = boxx;
-                return false;
-            });
-        });
+        
         //--------------------ทำปุ่มเพิ่มของ--------------------//
         var oper1 = document.createElement("span");
         var oper2 = document.createElement("span");
-        var amount = document.createElement("input");
+        var amount = document.createElement("span");
         var pp = document.createTextNode("+");
         var mm = document.createTextNode("-");
         oper1.classList.add("min");
         oper2.classList.add("plux");
         amount.classList.add("num2");
-        amount.type = "text";
-        amount.value = num_item;
+        // amount.type = "text";
+        // amount.value = num_item;
+        amount.innerHTML = num_item;
+        amount.id = "amount";
         oper1.appendChild(mm);
         oper2.appendChild(pp);
         div_input.appendChild(oper1);
         div_input.appendChild(amount);
         div_input.appendChild(oper2);
         //--------------------ทำปุ่มเพิ่มของ--------------------//
+        // -------------------------------cal----------------------- //
+        boxx += num_item * price_total;
+        var total = document.getElementById("total");
+        total.innerHTML = boxx + ".00 B";
+        numt += num_item;
+        var l1 = document.getElementById("line1");
+        var sub = document.getElementById("sub1")
+        $(document).ready(function () {
+            oper1.onclick = function() {
+                var num = amount.innerHTML;
+                num -= 1;
+                numt -= 1;
+                boxx -= 3890;
+                if ((numt <= 0) || (num <= 0 )) {
+                    big_box.remove();
+                }
+                else if(numt == 0){
+                    boxx = 0;
+                }
+                amount.innerHTML = num;
+
+                total.innerHTML = boxx + ".00 B";
+            };
+            oper2.onclick = function() {
+                var num = parseInt(amount.innerHTML);
+                num += 1;
+                numt += 1;
+                boxx += 3890;
+                amount.innerHTML = num;
+                total.innerHTML = boxx + ".00 B";
+
+            };
+        });
+        // $(document).ready(function () {
+        //     $('.min').click(function () {
+        //         var $input = $(this).parent().find('input');
+        //         var num = parseInt($input.val()) - 1;
+
+        //         numt -= 1;
+        //         boxx -= 3890;
+        //         if ((numt <= 0) || (num <= 0 )) {
+        //             big_box.remove();
+        //         }
+        //         else if(numt == 0){
+        //             boxx = 0;
+        //         }
+        //         $input.val(num);
+
+        //         total.innerHTML = boxx + ".00 B" +numt;
+        //     });
+        //     $('.plux').click(function () {
+        //         var $input = $(this).parent().find('input');
+        //         var num = parseInt($input.val()) + 1;
+        //         numt += 1;
+        //         $input.val(num);
+
+        //         boxx += 3890;
+        //         total.innerHTML = boxx + ".00 B";
+
+        //     });
+        // });
+        // --------------------------------close cal -------------------------- //
+        
         var p_price = document.createTextNode("3,890.00 B")
         price.appendChild(p_price);
-        // hr.classList.add('hr-cart');
-        // box.appendChild(hr);
+ 
         // ----------------------pic-------------------- //
         var cart_left = document.createElement("div");
         cart_left.classList.add("left-cart");
