@@ -44,7 +44,7 @@
 
                     <div class="price-cart-b">
                         <div class="number-cart">
-                            <span class="minus" id="min" onclick="remove()">-</span>
+                            <span class="minus" id="min" onclick="removed()">-</span>
                             <input class="quan" id="number" type="text" value="1" />
                             <span class="plus" id="plux">+</span>
                         </div>
@@ -561,7 +561,7 @@
         y.classList.remove("go-left");
     }
     
-    function remove() {
+    function removed() {
         var erase = document.getElementsById("detailCart");
         erase.remove();
     }
