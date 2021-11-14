@@ -396,7 +396,7 @@ body {
     width: 80%;
     margin: auto;
     padding: 50px 0;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #footer .footer-content .footer-menu {
