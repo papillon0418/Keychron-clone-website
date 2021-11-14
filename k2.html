@@ -590,7 +590,7 @@
         boxx += num_item * price_total;
         var total = document.getElementById("total");
         total.innerHTML = boxx;
-        var numt = 0;
+        var numt = num_item;
         // var nump = num_item;
         $(document).ready(function () {
             $('.min').click(function () {
@@ -599,27 +599,30 @@
                 // if (num_item <= 0) {
                 //     num_item = 1;
                 // }
-                num_item -= 1;
-                if (num_item <= 0) {
+                numt -= 1;
+                if (numt <= 0) {
                     big_box.remove();
-                    num_item = 1;
+                    numt = 1;
                 }
-                $input.val(num);
+                $input.val(numt);
                 $input.change();
-                boxx -= num*price_total;
+                // numt = (num)*price_total;
+                boxx -= 3890;
+                // boxx -=
                 total.innerHTML = boxx;
                 return false;
             });
             $('.plux').click(function () {
                 var $input = $(this).parent().find('input');
                 var num = parseInt($input.val()) + 1;
-                num_item += 1;
-                $input.val(num);
+                numt += 1;
+                $input.val(numt);
                 $input.change();
                 // if (num == 0) {
                 //     big_box.remove();
                 // }
-                boxx += num*price_total;
+                // numt = (num)*price_total;
+                boxx += 3890;
                 total.innerHTML = boxx;
                 return false;
             });
