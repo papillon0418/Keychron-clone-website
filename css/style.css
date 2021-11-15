@@ -16,16 +16,19 @@ body {
 
 @keyframes fade {
     from {
-        opacity: 0;
-    }
-    to {
         opacity: 1;
     }
+    to {
+        opacity: 0;
+    }
 }
+
+
 
 /* top */
 
 .covidTxt {
+    position: relative;
     height: 5vh;
     display: flex;
     justify-content: center;
@@ -48,7 +51,6 @@ body {
 
 
 /* nav start here */
-
 .nav-container {
     z-index: 1;
     position: sticky;
@@ -67,7 +69,7 @@ body {
 .accessories,
 .switch,
 .blog{
-    margin: 30px;
+    margin: 1em;
 } 
 
 .keyboards ul,
@@ -77,7 +79,6 @@ body {
 .blog ul {
     position: absolute;
     background-color: #fff;
-    margin-top: 20px;
     padding: 0;
     width: 200px;
     height: 200px;
@@ -89,7 +90,7 @@ body {
     list-style: none;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-20px);
+    transform: translateY(-10px);
     transition: all 0.5s ease;
     box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -386,23 +387,25 @@ body {
 /* content end here */
 
 #footer {
+    border: 2px solid black;
     background-color: rgb(238, 235, 235);
     color: #000;
     position: relative;
 }
 
 #footer .footer-content {
-    display: flex;
     width: 80%;
+    display: flex;
     margin: auto;
     padding: 50px 0;
+    /* border: 10px solid red; */
     justify-content: center;
 }
 
 #footer .footer-content .footer-menu {
     margin: 0 60px;
     list-style: none;
-    justify-content: center;
+    border: 2px solid black;
 }
 
 #footer .footer-content .footer-menu .footer-menu-item {
@@ -436,6 +439,7 @@ body {
 
 .socials {
     display: flex;
+    border: 2px solid black;
     /* width: 300px; */
 }
 
@@ -576,11 +580,32 @@ body {
     transform: scale(1.025);
 }
 
+
+.searchbox {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    top: 0;
+    opacity: 0;
+    background-color: red;
+    display: flex;
+    align-items: center;
+}
+
+.searchbox p {
+    margin-left: 7em;
+    font-size: 2em;
+    color: rgb(238, 238, 238);
+}
+
+
+
 @media (max-width: 800px) {
     body{
         overflow: hidden;
         overflow-y: scroll;
     }
+
     .firstRow {
         flex-direction: column;
     }
@@ -588,26 +613,31 @@ body {
     .influencer {
         transform: scale(0.5);
     }
-
-    h1, p, button {
-        transform: scale(0.75);
-    }
-    .nav-container {
-        width: 100%;
-        transform:scale(0.75);
-    }
-
-    .buttonX1 {
-        left: 35%;
-    }
-
-    .buttonX2 {
-        top: 138%;
-        left: 35% ;
-        z-index: 1000;
-    }
     
-    /* cart */
+    h1 {
+        transform: scale(0.8);
+    }
+    .one p, .two p, .three p, .four p{
+        
+        transform: scale(0.85);
+    }
+
+    .keyboards button, .slimKeyboards button, .accessories button, .switch button, .buy, .icons a, .blog button, .icons a i, .logo {
+        transform: scale(0.5);
+        justify-content: space-around;
+    }
+
+    .socials {
+        display: none;
+    }
+
+    .footer-content {
+        margin: 0 0;
+    }
+}
+
+
+/* cart */
 
 .hr-cart{
     border: 0.5px solid #eeeeee;
@@ -802,5 +832,4 @@ body {
         opacity: 0;
         transition: 1s;
     }
-}
 }
