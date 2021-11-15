@@ -201,7 +201,21 @@ body {
 
 
 /* nav end here */
+/* Info */
 
+.first{
+    font-family: 'Mitr', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 45px;
+}
+.second{
+    font-family: 'Mitr', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 39px;
+}
 
 /* footer start here */
 
@@ -402,12 +416,113 @@ body {
     color: rgb(54, 54, 54);
 }
 
+/* section-pic */
+.sec-pic1 {
+    width: 100%;
+    min-height: 40vh;
+    position: relative;
+    display: block;
+    align-items: center;
+    padding: 15px 0px;
+}
+.test-pic1-row {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: warp;
+    display: flex;
+}
+.test-pic1-wrap{
+    padding: 0 15px;
+    width: 100%;
+    margin: auto;
+    max-width: 1170px;
+    box-sizing: border-box;
+    display: block;
+    height: 40vh;
+}
+.test-pic1-col{
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+}
+.test-pic-crop{
+    box-sizing: border-box;
+    display: block;
+    padding: 15px;
+}
+.test-pic1-col a{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-block;
+}
+.button-keychron{
+    box-sizing: border-box;
+    color: inherit;
+    text-align: center;
+}
 
+
+.sec-pic2{
+    width: 100%;
+    min-height: 40vh;
+    position: relative;
+    display: block;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.test-pic2-wrap{
+    padding: 0 15px;
+    width: 100%;
+    margin: auto;
+    max-width: 1170px;
+    box-sizing: border-box;
+    display: block;
+    height: 40vh;
+}
+
+.test-pic2-col{
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+}
+
+.test-pic2-a{
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 1;
+    display: inline-block;
+}
+.test-pic2-class-a2{
+    width: 100%;
+    height: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    vertical-align: middle;
+    max-width: 100%;
+    display: inline-block;
+}
 /* onlineStore start here */
 
 .onlineStore {
     width: 100%;
-    height: 250vh;
+    height: 95vh;
     /* background-color: lightgray; */
     position: relative;
     display: flex;
@@ -420,7 +535,8 @@ body {
 }
 
 .txtbox1 p {
-    font-size: 1.5rem;
+    font-family: Prompt;
+    font-size: 18px;
     font-weight: 200;
     letter-spacing: 0.5px;
 }
@@ -468,9 +584,8 @@ body {
 .rowbtn {
     width: 100%;
     height: 20%;
-    /* border: 2px solid black; */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
