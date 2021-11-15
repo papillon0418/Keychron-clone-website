@@ -417,6 +417,21 @@ body {
 }
 
 /* section-pic */
+.sec-heading {
+    width: 100%;
+    min-height: 10vh;
+    position: relative;
+    display: block;
+    align-items: center;
+    padding: 15px 0px;
+}
+.test-heading {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: warp;
+    display: flex;
+}
 .sec-pic1 {
     width: 100%;
     min-height: 40vh;
