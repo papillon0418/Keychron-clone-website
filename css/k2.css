@@ -6,7 +6,18 @@
 }
 body{
     scroll-behavior: smooth;
+    animation: fade 1s ease-in;
 }
+
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .covidTxt {
     height: 5vh;
     display: flex;
