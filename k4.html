@@ -24,6 +24,46 @@
 </style>
 
 <body>
+     <div class="big-cart" id="big-cart2">
+        <div class="c-2" id="c-2" onclick="Change()"></div>
+        <div class="cart" id="c-cart">
+            <br>
+            <div class="head-cart">
+                <h1>Cart</h1>
+                <h5><i class="fa fa-times" aria-hidden="true" onclick="Change()"></i></h5>
+            </div>
+            <hr class="hr-cart">
+            <div id="mid">
+                <!-- <div class="detail-cart" id="detail-big">
+                <div class="left-cart">
+                    <div id="img-cart-add" class="img-add"></div>
+                </div>
+                <div class="right-cart" id="cart-right">
+                    <div id="detail-add" class="detail-add-cart">
+                        <p id="de-cart"></p>
+                        <p id="item-value"</p>
+                        <div class="price-cart-b">
+                            <div class="number-cart" id="num-box">
+                            </div>
+                            <span id="price-cart"></span>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            </div>
+            <hr class="hr-cart" id="line1">
+            <div class="sub-cart" id="sub1">
+                <input type="checkbox"><label>&nbsp; ฉันยอมรับข้อตกลงและเงื่อนไข ฯ</label>
+                <div class="sub-total">
+                    <h5><b>SUBTOTAL</b></h5>
+                    <h5 id="total"></h5>
+                </div>
+                <p>Shipping, taxes, and discounts codes calculated at checkout.</p>
+                <button class="checkout">check out</button>
+            </div>
+            <br>
+        </div>
+    </div>
     <div class="covidTxt">
         <p>เนื่องจากสถานการณ์เเพร่ระบาดของโรค COVID-19 ส่งผลกระทบต่อการเดินทางขนส่งสินค้า
             ทําให้การจัดส่งสินค้าถึงปลายทางล่าช้ากว่าปกติ
@@ -81,7 +121,7 @@
         <div class="icons">
             <a href="login.html"><i class="far fa-user" href="login.html"></i></a>
             <a href="#"><i class="fas fa-search"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="#" onclick="On()"><i class="fas fa-shopping-cart"></i></a>
         </div>
     </div>
     <div class="kan">
@@ -404,5 +444,5 @@
         });
     });
 </script>
-
+<script src="js/main.js"></script>
 </html> 
