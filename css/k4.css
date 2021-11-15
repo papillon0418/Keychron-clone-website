@@ -1102,11 +1102,11 @@ iframe{
 
 .legal-footer {
     pointer-events: none;
+    display: flex;
+    justify-content: center;
 }
 .legal-foot {
     position: absolute;
     bottom: 0;
-    text-align: center;
-    left: 10%;
     transform: scale(0.8);
 }
