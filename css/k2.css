@@ -4,7 +4,9 @@
     box-sizing: border-box;
     font-family: 'Prompt', sans-serif;
 }
-
+body{
+    scroll-behavior: smooth;
+}
 .covidTxt {
     height: 5vh;
     display: flex;
@@ -29,7 +31,6 @@
 }
 .big-cart{
     width: 100%;
-    /* height: 100vh; */
     display: flex;
     position: relative;
     background-color: #393E46; /* Black w/ opacity */
@@ -635,6 +636,13 @@ iframe{
     margin: auto;
 }
 
+.keyboards,
+.slimKeyboards,
+.accessories,
+.switch,
+.blog {
+    margin: 1em;
+}
 .keyboards ul,
 .slimKeyboards ul,
 .accessories ul,
@@ -786,7 +794,9 @@ iframe{
     color: #000;
     position: relative;
     width: 100%;
+    height: 60vh;
     /* border: 13px solid blue; */
+    overflow: hidden;
 }
 
 #footer .footer-content{
@@ -878,7 +888,6 @@ iframe{
     list-style: none;
     margin-bottom: 15px;
     position: relative;
-
 }
 
 
@@ -892,7 +901,6 @@ iframe{
 }
 
 /* .footer-info .rights{
-
 } */
 
 .footer-info .rights .country{
@@ -900,7 +908,6 @@ iframe{
     justify-content: flex-end;
     margin-bottom: 10px;
     align-items: center;
-    margin-bottom: 20px;
 }
 .footer-info .rights .country li{
     list-style: none;
@@ -914,13 +921,19 @@ iframe{
 
 .footer-info .rights .country .thailand-flag{
     height: 20px;
-    width: auto;
+    width: 100%;
     display: inline-block;
     margin-left: 10px;
 }
 /* footer end here */
 
-.juy {
-    width: 100%;
-    background-color: rgb(238, 235, 235);
+.legal-footer {
+    pointer-events: none;
+}
+.legal-foot {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    left: 10%;
+    transform: scale(0.8);
 }
