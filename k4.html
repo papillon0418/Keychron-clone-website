@@ -59,7 +59,7 @@
                     <h5 id="total"></h5>
                 </div>
                 <p>Shipping, taxes, and discounts codes calculated at checkout.</p>
-                <button class="checkout">check out</button>
+                <a href="login.html" class="btn checkout" role="button">Check out</a>
             </div>
             <br>
         </div>
@@ -129,55 +129,70 @@
     </div>
     <div class="b-box">
         <div class="pic">
+            <div class="li">
+                <div class="d active" id="demo"><img class="small-img" src="img/k4main.jpg"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k4-cap-thai/k4-blue-darkgrey-thai.jpg"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k4-cap-thai/k4-brown-darkgrey-thai.jpg"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k4-cap-thai/k4-red-darkgrey-thai.jpg"></div>
+                <div class="d" id="demo"><img class="small-img" src="img/k4-cap-thai/k4-blue-lightgrey-thai.jpg"></div>
+            </div>
             <ul><img src="img/k4main.jpg" id="Product"></ul>
-            <div class="li"><img class="small-img" src="img/k2-01.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-blue-black.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-brown.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-red.png"></div>
-            <div class="li"><img class="small-img" src="img/k2-bblue.png"></div>
         </div>
         <div class="detail">
-            <h2>Keychron K4 V.2 Wireless<br> Mechanical Keyboard
+            <h2>Keychron K4 V.2 Wireless <br>Mechanical Keyboard
             </h2>
-            <span id="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+            <span id="star"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                    class="fas fa-star"></i><i class="fas fa-star"></i></span>
             <span> 141 รีวิว</span>
-            <h4>4,390.00 B</h2>
+            <h4>3,890.00 B</h2>
                 <h7>Tax included.
             </h4>
             <hr>
             <div class="btn-ver">
                 <div class="ver">
                     <h6>รุ่น/สี</h6>
-                    <label class="click"><input type="radio" name="group-1"><span>RGB Backlight Aluminum Frame
-                            Hot-Swappable - Dark Grey</span></label>
-                    <label class="click"><input type="radio" name="group-1"><span>RGB Backlight Aluminum Frame
-                            Hot-Swappable - Light Grey</span></label>
+                    <label class="click"><input checked="checked" type="radio" name="group-1" value="RGB Backlight Aluminum
+                        Frame
+                        Hot-Swappable - Dark Grey"><span>RGB Backlight Aluminum Frame Hot-Swappable - Dark
+                            Grey</span></label>
+                    <label class="click"><input type="radio" name="group-1" value="RGB Backlight Aluminum
+                        Frame
+                        Hot-Swappable - Light Grey"><span>RGB Backlight Aluminum Frame Hot-Swappable - Light
+                            Grey</span></label>
                 </div>
-                <div class="switch">
+                <div class="switch-test">
                     <h6>สวิตซ์</h6>
-                    <label class="click"><input type="radio" name="group-2"><span>Gateron Red Switch</span></label>
-                    <label class="click"><input type="radio" name="group-2"><span>Gateron Blue Switch</span></label><br>
-                    <label class="click"><input type="radio" name="group-2"><span>Gateron Brown Switch</span></label>
+                    <label class="click"><input type="radio" checked="checked" name="group-2" value="Gateron Red
+                        Switch"><span>Gateron Red
+                            Switch</span></label>
+                    <label class="click"><input type="radio" name="group-2" value="Gateron Blue
+                        Switch"><span>Gateron Blue
+                            Switch</span></label><br>
+                    <label class="click"><input type="radio" name="group-2" value="Gateron Brown
+                        Switch"><span>Gateron Brown
+                            Switch</span></label>
                 </div>
                 <div class="lang">
                     <h6>ภาษาคีย์บอร์ด</h6>
-                    <label class="click"><input type="radio" name="group-3"><span>ภาษาอังกฤษ</span></label>
-                    <label class="click"><input type="radio" name="group-3"><span>ภาษาไทย</span></label>
+                    <label class="click"><input checked="checked" type="radio" name="group-3"
+                            value="ภาษาอังกฤษ"><span>ภาษาอังกฤษ</span></label>
+                    <label class="click"><input type="radio" name="group-3" value="ภาษาไทย"><span>ภาษาไทย</span></label>
                 </div>
                 <h6>QUANTITY</h6>
                 <div class="number">
                     <span class="minus">-</span>
                     <input class="quan" type="text" value="1" />
                     <span class="plus">+</span>
+                </div><br>
+                <div>
+                    <button class="sold" onclick="cart()">add to cart</button>
+                    <br><br><br>
                 </div>
-                <button class="sold">Sold Out</button>
-                <button class="noti">เตือนฉันเมื่อสินค้าพร้อมจำหน่าย</button>
                 <hr>
                 <div class="face-tweet">
                     <br>
                     <span><i class="fab fa-facebook-f"></i> Share</span>
-                    <span style="padding-left: 20px;"><i class="fab fa-twitter"> Tweet</i></span>
-                    <br>
+                    <span><i class="fab fa-twitter">Tweet</i></span>
                 </div>
             </div>
         </div>
@@ -387,51 +402,45 @@
                 <i class="fab fa-twitter"></i>
                 <i class="fab fa-facebook"></i>
             </div>
-    </footer>
-    <div class="juy">
-        <div class="footer-info">
-            <div class="rights">
-                <div class="country">
-                    <li>Thailand (TH)</li>
-                    <li>Webtech 2021⭐</li>
-                </div>
-            </div>
-    
-            <ul class="footer-info-items">
-                <li class="footer-info-item">Legal</li>
-                <li class="footer-info-item">Privacy</li>
-                <li class="footer-info-item">Policy</li>
-                <li class="footer-info-item">Cookies</li>
-                <li class="footer-info-item">Advertisement</li>
-    
-            </ul>
         </div>
-    </div>
+
+        <div class="legal-footer">
+            <img class="legal-foot" src="img/lastfooter.png" alt="">
+        </div>
+    </footer>
 </body>
 <script>
     var Product = document.getElementById("Product");
     var small = document.getElementsByClassName("small-img");
-    small[0].onclick = function () {
-        Product.src = small[0].src;
+    var demo = document.querySelectorAll(".d");
+    function box() {
+        demo.forEach(demo => demo.classList.remove('active'));
+        this.classList.add('active');
+        for (let i = 0; i <= 4; i++) {
+            small[i].onclick = function () {
+                Product.src = small[i].src;
+            }
+        }
     }
-    small[1].onclick = function () {
-        Product.src = small[1].src;
-    }
-    small[2].onclick = function () {
-        Product.src = small[2].src;
-    }
-    small[3].onclick = function () {
-        Product.src = small[3].src;
-    }
-    small[4].onclick = function () {
-        Product.src = small[4].src;
-    }
-
+    demo.forEach(demo => demo.addEventListener('click', box));
+    // for (let i = 0; i <= 4; i++) {
+    //     small[i].onclick = function () {
+    //         Product.src = small[i].src;
+    //     }
+    // }
+    var num_item = 1;
+    var price_total = 3890;
+    let boxx = 0;
+    var numt =  0;
     $(document).ready(function () {
         $('.minus').click(function () {
             var $input = $(this).parent().find('input');
             var count = parseInt($input.val()) - 1;
             count = count < 1 ? 1 : count;
+            num_item -= 1;
+            if (num_item <= 0) {
+                num_item = 1;
+            }
             $input.val(count);
             $input.change();
             return false;
@@ -440,9 +449,236 @@
             var $input = $(this).parent().find('input');
             $input.val(parseInt($input.val()) + 1);
             $input.change();
+            num_item += 1;
             return false;
         });
     });
+
+    function On() {
+        var x = document.getElementById("c-cart");
+        var y = document.getElementById("c-2");
+        x.classList.add("animate-cart");
+        y.classList.add("go-left");
+        x.classList.remove("move-out-right");
+        y.classList.remove("move-out-left");
+    }
+    function cart() {
+        // slideeeeeeeeeeeeeeeeeeeeeeeeeeeee //
+        var x = document.getElementById("c-cart");
+        var y = document.getElementById("c-2");
+        x.classList.add("animate-cart");
+        y.classList.add("go-left");
+        x.classList.remove("move-out-right");
+        y.classList.remove("move-out-left");
+        // close - slideeeeeeeeeeeeeeeeeeeeeeeeeeeee //
+        var text = document.createTextNode("Keychron K4 V.2 Wireless Hot-swappable Mechanical Keyboard");
+        var g1 = document.getElementsByName('group-1');
+        var g2 = document.getElementsByName('group-2');
+        var g3 = document.getElementsByName('group-3');
+        var mid = document.getElementById("mid");
+        var br = document.createElement("br");
+        var hr = document.createElement("hr");
+        var big_box = document.createElement("div");
+
+        big_box.classList.add("detail-cart");
+        big_box.id = "detail-big";
+        mid.appendChild(big_box);
+        // create box inner right-cart //
+        var div_detail = document.createElement("div");
+        var div_price = document.createElement("div");
+        var div_input = document.createElement("div");
+        var ptag = document.createElement("h5");
+        var ptag2 = document.createElement("p");
+        var price = document.createElement("span");
+        var big_right = document.createElement("div");
+        big_right.classList.add("right-cart");
+        big_right.id = "cart-right";
+        big_right.appendChild(div_detail);
+        ptag.id = "de-cart";
+        price.id = "price-cart";
+        ptag2.id = "item-value"
+        ptag.appendChild(text);
+        div_detail.classList.add("detail-add-cart");
+        div_detail.id = "detail-add";
+        div_price.classList.add("price-cart-b");
+        div_input.classList.add("number-cart")
+        div_input.id = "num-box";
+        div_price.appendChild(div_input);
+        div_price.appendChild(price);
+        div_detail.appendChild(ptag);
+        div_detail.appendChild(ptag2);
+        div_detail.appendChild(div_price);
+        div_detail.appendChild(br);
+        //
+        // create box inner right-cart //
+        for (var i = 0; i < g1.length; i++) {
+            if (g1[i].checked) {
+                var text = g1[i].value;
+                var t = document.createTextNode(text+" / ");
+                ptag2.appendChild(t);
+            }
+        }
+        for (var i = 0; i < g2.length; i++) {
+            if (g2[i].checked) {
+                var text = g2[i].value;
+                var t = document.createTextNode(text+" / ");
+                ptag2.appendChild(t);
+            }
+        }
+        for (var i = 0; i < g3.length; i++) {
+            if (g3[i].checked) {
+                var text = g3[i].value;
+                var t = document.createTextNode(text);
+                ptag2.appendChild(t);
+            }
+        }
+        // ---------------------cal---------------------- //
+        // $(document).ready(function () {
+        //     $('.num2').prop('disabled', true);
+        //     $(document).on('click', '.plux', function () {
+        //         $('.num2').val(parseInt($('.num2').val()) + 1);
+        //     });
+        //     $(document).on('click', '.min', function () {
+        //         $('.num2').val(parseInt($('.num2').val()) - 1);
+        //         if ($('.num2').val() == 0) {
+        //             $('.num2').val(1);
+        //             big_box.remove();
+        //         }
+        //     });
+        // });
+
+
+        //--------------------ทำปุ่มเพิ่มของ--------------------//
+        var oper1 = document.createElement("span");
+        var oper2 = document.createElement("span");
+        var amount = document.createElement("span");
+        var pp = document.createTextNode("+");
+        var mm = document.createTextNode("-");
+        oper1.classList.add("min");
+        oper2.classList.add("plux");
+        amount.classList.add("num2");
+        // amount.type = "text";
+        // amount.value = num_item;
+        amount.innerHTML = num_item;
+        amount.id = "amount";
+        oper1.appendChild(mm);
+        oper2.appendChild(pp);
+        div_input.appendChild(oper1);
+        div_input.appendChild(amount);
+        div_input.appendChild(oper2);
+        //--------------------ทำปุ่มเพิ่มของ--------------------//
+        // -------------------------------cal----------------------- //
+        boxx += num_item * price_total;
+        var total = document.getElementById("total");
+        total.innerHTML = boxx + ".00 B";
+        numt += num_item;
+        var l1 = document.getElementById("line1");
+        var sub = document.getElementById("sub1")
+        $(document).ready(function () {
+            oper1.onclick = function() {
+                var num = amount.innerHTML;
+                num -= 1;
+                numt -= 1;
+                boxx -= 3890;
+                if ((numt <= 0) || (num <= 0 )) {
+                    big_box.remove();
+                }
+                else if(numt == 0){
+                    boxx = 0;
+                }
+                amount.innerHTML = num;
+
+                total.innerHTML = boxx + ".00 B";
+            };
+            oper2.onclick = function() {
+                var num = parseInt(amount.innerHTML);
+                num += 1;
+                numt += 1;
+                boxx += 3890;
+                amount.innerHTML = num;
+                total.innerHTML = boxx + ".00 B";
+
+            };
+        });
+        // $(document).ready(function () {
+        //     $('.min').click(function () {
+        //         var $input = $(this).parent().find('input');
+        //         var num = parseInt($input.val()) - 1;
+
+        //         numt -= 1;
+        //         boxx -= 3890;
+        //         if ((numt <= 0) || (num <= 0 )) {
+        //             big_box.remove();
+        //         }
+        //         else if(numt == 0){
+        //             boxx = 0;
+        //         }
+        //         $input.val(num);
+
+        //         total.innerHTML = boxx + ".00 B" +numt;
+        //     });
+        //     $('.plux').click(function () {
+        //         var $input = $(this).parent().find('input');
+        //         var num = parseInt($input.val()) + 1;
+        //         numt += 1;
+        //         $input.val(num);
+
+        //         boxx += 3890;
+        //         total.innerHTML = boxx + ".00 B";
+
+        //     });
+        // });
+        // --------------------------------close cal -------------------------- //
+
+        var p_price = document.createTextNode("3,890.00 B")
+        price.appendChild(p_price);
+
+        // ----------------------pic-------------------- //
+
+        var cart_left = document.createElement("div");
+        cart_left.classList.add("left-cart");
+        var pic = document.createElement("div");
+        pic.classList.add("img-add");
+        pic.id = "img-cart-add";
+        cart_left.appendChild(pic);
+        // var pic = document.getElementById("img-cart-add");
+        var ele = document.createElement("img");
+        if (g1[0].checked && g2[0].checked) {
+            ele.src = "img/k4-cap-thai/k4-red-darkgrey-thai.jpg";
+            pic.appendChild(ele);
+        }
+        else if (g1[0].checked && g2[1].checked) {
+            ele.src = "img/k4-cap-thai/k4-blue-darkgrey-thai.jpg";
+            pic.appendChild(ele);
+        }
+        else if (g1[0].checked && g2[2].checked) {
+            ele.src = "img/k4-cap-thai/k4-brown-darkgrey-thai.jpg";
+            pic.appendChild(ele);
+        }
+        else if (g1[1].checked && g2[0].checked) {
+            ele.src = "img/k4-cap-thai/k4-red-lightgrey-thai.jpg";
+            pic.appendChild(ele);
+        }
+        else if (g1[1].checked && g2[1].checked) {
+            ele.src = "img/k4-cap-thai/k4-blue-lightgrey-thai.jpg";
+            pic.appendChild(ele);
+        }
+        else if (g1[1].checked && g2[2].checked) {
+            ele.src = "img/k4-cap-thai/k4-brown-lightgrey-thai.jpg";
+            pic.appendChild(ele);
+        }
+        big_box.appendChild(cart_left);
+        big_box.appendChild(big_right);
+
+    }
+    function Change() {
+        var x = document.getElementById("c-cart");
+        var y = document.getElementById("c-2");
+        x.classList.add("move-out-right");
+        y.classList.add("move-out-left");
+        x.classList.remove("animate-cart");
+        y.classList.remove("go-left");
+    }
 </script>
 <script src="js/main.js"></script>
 </html> 
