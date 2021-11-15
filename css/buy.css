@@ -470,6 +470,12 @@ body {
     text-align: center;
 }
 
+.test-pic1-col a:hover{
+    color: white;
+}
+.test-pic2-a:hover{
+    color: white;
+}
 
 .sec-pic2{
     width: 100%;
