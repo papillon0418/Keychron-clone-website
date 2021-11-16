@@ -745,6 +745,16 @@
         x.classList.remove("animate-cart");
         y.classList.remove("go-left");
     }
+    function zoom() {
+        var checkBox = document.getElementById("zoomCheck");
+        var ul = document.getElementById("zm");
+        if (checkBox.checked == true) {
+            ul.classList.add("modal-content");
+        } else {
+            ul.classList.remove("modal-content");
+        }
+    }
+    
 </script>
 
 </html>
