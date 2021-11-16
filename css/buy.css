@@ -4,6 +4,9 @@
     padding: 0;
     font-family: 'Prompt', sans-serif;
 }
+div{
+    display: block;
+}
 
 html:focus-within {
     scroll-behavior: smooth;
@@ -205,6 +208,10 @@ body {
 
 .first{
     font-family: 'Mitr', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: 20px;
+    margin-right: 20px;
     font-size: 24px;
     font-weight: 600;
     line-height: 45px;
@@ -212,16 +219,25 @@ body {
 .second{
     font-family: 'Mitr', sans-serif;
     text-align: center;
+    box-sizing: border-box;
     font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-weight: 100;
-    line-height: 39px;
+    line-height: 29px;
 }
 
 /* footer start here */
-
+@media only screen and (min-width: 590px){
+    #footer{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
 #footer {
     background-color: rgb(238, 235, 235);
     color: #000;
+    display: block;
 }
 
 #footer .footer-content {
@@ -349,7 +365,20 @@ body {
 
 /* imageCredit start here */
 
-.imageCredit {
+.sec-pic-head {
+    width: 100%;
+    padding-top: 50px;
+    padding: 15px 0px;
+    box-sizing: border-box;
+    min-height: 45vh;
+    position: relative;
+    display: block;
+    background: url("../img/creditt.jpg");
+    background-position-x: 50%;
+    background-position-y: 50%;
+    align-items: center;
+}
+/* .imageCredit {
     width: 100%;
     height: 42.5vh;
     position: relative;
@@ -358,7 +387,7 @@ body {
 .imageCredit img {
     width: 100%;
     height: 520px;
-}
+} */
 
 .txtbox {
     position: absolute;
@@ -425,20 +454,20 @@ body {
     align-items: center;
     padding: 15px 0px;
 }
+.sec-pic1 {
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    display: block;
+    align-items: center;
+    padding: 15px 0px;
+}
 .test-heading {
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     flex-wrap: warp;
     display: flex;
-}
-.sec-pic1 {
-    width: 100%;
-    min-height: 40vh;
-    position: relative;
-    display: block;
-    align-items: center;
-    padding: 15px 0px;
 }
 .test-pic1-row {
     box-sizing: border-box;
@@ -454,7 +483,6 @@ body {
     max-width: 1170px;
     box-sizing: border-box;
     display: block;
-    height: 40vh;
 }
 .test-pic1-col{
     position: relative;
@@ -498,7 +526,6 @@ body {
     position: relative;
     display: block;
     align-items: center;
-    padding: 15px 0px;
 }
 
 .test-pic2-wrap{
@@ -540,28 +567,79 @@ body {
     display: inline-block;
 }
 /* onlineStore start here */
-
+.sec-online{
+    width: 100%;
+    min-height: 95vh;
+    padding-top: 50px;
+    position: relative;
+    display: block;
+    align-items: center;
+    box-sizing: border-box;
+}
 .onlineStore {
     width: 100%;
-    height: 95vh;
-    /* background-color: lightgray; */
-    position: relative;
+    padding: 0 15px;
+    margin: auto;
+    max-width: 1170px;
+    box-sizing: border-box;
+    display: block;
+}
+.onlineStore-wrap{
+    flex-wrap: wrap;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    box-sizing: border-box;
+    margin-right: -15px;
+    margin-left: -15px;
 }
-
-.onlineStore h1 {
+.textbox-wrap{
+    display: flex;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.textbox{
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
+.ul-textbox{
+    text-align: left;
+    margin-right: 230px;
+    margin-left: 230px;
+    list-style-position: inside;
+    list-style-type: none;
+    font-size: 18px;
+    font-family: Prompt;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 40px;
+}
+.ul-textbox li{
+    display: list-item;
+}
+.li-textbox{
+    list-style: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+}
+.testing-h3{
     text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    box-sizing: border-box;
 }
-
 .txtbox1 p {
     font-family: Prompt;
     font-size: 18px;
     font-weight: 200;
     letter-spacing: 0.5px;
 }
-
+.test-span{
+    box-sizing: border-box;
+    text-align: center;
+}
 .storeBlock {
     margin-top: 0;
     width: 70%;
@@ -624,6 +702,13 @@ h1 {
 }
 
 
+.offline-head{
+    padding-top: 50px;
+    padding-bottom: 15px;
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+}
 /* onlineStore end here */
 /* cart */
 
