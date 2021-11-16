@@ -209,6 +209,7 @@ label.click input:checked+span {
     color: white;
     background-color: black;
     margin-bottom: 40px;
+    border:none;
 }
 
 /* --------------video------------------ */
