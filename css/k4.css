@@ -189,7 +189,7 @@ label.click input:checked+span {
     margin-bottom: 10px;
     width: 50%;
     height: 55px;
-    border: 1px solid grey;
+/*     border: 1px solid grey; */
 }
 /* .sold:focus{
     background-color: black;
