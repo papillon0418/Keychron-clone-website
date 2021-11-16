@@ -187,7 +187,7 @@ label.click input:checked+span {
     color: #ACAEAD;
     margin-top: 20px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 50%;
     height: 55px;
     border: 1px solid grey;
 }
@@ -201,7 +201,7 @@ label.click input:checked+span {
 } */
 
 .noti {
-    width: 90%;
+    width: 50%;
     position: relative;
     left: 5%;
     height: 40px;
