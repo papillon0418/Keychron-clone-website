@@ -967,3 +967,11 @@ iframe{
     bottom: 0;
     transform: scale(0.8);
 }
+
+.footer-menu a {
+    color:#000;
+}
+
+.footer-menu a:hover {
+    text-decoration: none;
+}
