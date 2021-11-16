@@ -599,7 +599,7 @@
         // -------------------------------cal----------------------- //
         boxx += num_item * price_total;
         var total = document.getElementById("total");
-        total.innerHTML = boxx + ".00 B";
+        total.innerHTML = boxx + ".00 &#3647;";
         numt += num_item;
         var l1 = document.getElementById("line1");
         var sub = document.getElementById("sub1")
@@ -617,7 +617,7 @@
                 }
                 amount.innerHTML = num;
 
-                total.innerHTML = boxx + ".00 B";
+                total.innerHTML = boxx + ".00 &#3647;";
             };
             oper2.onclick = function() {
                 var num = parseInt(amount.innerHTML);
@@ -625,7 +625,7 @@
                 numt += 1;
                 boxx += 3890;
                 amount.innerHTML = num;
-                total.innerHTML = boxx + ".00 B";
+                total.innerHTML = boxx + ".00 &#3647;";
 
             };
         });
@@ -644,7 +644,7 @@
         //         }
         //         $input.val(num);
 
-        //         total.innerHTML = boxx + ".00 B" +numt;
+        //         total.innerHTML = boxx + ".00 &#3647;" +numt;
         //     });
         //     $('.plux').click(function () {
         //         var $input = $(this).parent().find('input');
@@ -653,13 +653,13 @@
         //         $input.val(num);
 
         //         boxx += 3890;
-        //         total.innerHTML = boxx + ".00 B";
+        //         total.innerHTML = boxx + ".00 &#3647;";
 
         //     });
         // });
         // --------------------------------close cal -------------------------- //
 
-        var p_price = document.createTextNode("3,890.00 B")
+        var p_price = document.createTextNode("3,890.00 &#3647;")
         price.appendChild(p_price);
 
         // ----------------------pic-------------------- //
