@@ -366,7 +366,7 @@ label.click input:checked+span {
     background-color: white;
     margin-top: 20px;
     margin-bottom: 10px;
-    width: 100%;
+    width: 65%;
     height: 55px;
     border: 1px solid grey;
 }
