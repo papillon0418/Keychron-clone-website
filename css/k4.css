@@ -183,21 +183,22 @@ label.click input:checked+span {
 }
 /* -------------------------------- */
 .sold {
-    background-color: white;
+    background-color: #EAEDEC;
+    color: #ACAEAD;
     margin-top: 20px;
     margin-bottom: 10px;
     width: 100%;
     height: 55px;
     border: 1px solid grey;
 }
-.sold:focus{
+/* .sold:focus{
     background-color: black;
     color: white;
 }
 .sold:visited{
     background-color: white;
     color: black;
-}
+} */
 
 .noti {
     width: 90%;
