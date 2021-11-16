@@ -512,7 +512,7 @@ label.click input:checked+span {
 }
 .ver2{
     width: 500px;
-    height: 272px;
+    height: auto;
     right: 15%;
     position: absolute;
     margin-top: 0%;
