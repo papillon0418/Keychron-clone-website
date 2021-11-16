@@ -11,6 +11,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+
+
+    <!-- bootastrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <title>Keychron K4</title>
 
     <!-- font -->
@@ -24,7 +33,7 @@
 </style>
 
 <body>
-     <div class="big-cart" id="big-cart2">
+    <div class="big-cart" id="big-cart2">
         <div class="c-2" id="c-2" onclick="Change()"></div>
         <div class="cart" id="c-cart">
             <br>
@@ -70,13 +79,13 @@
         </p>
     </div>
     <div class="nav-container">
-         <a href="index.html"> 
+        <a href="index.html">
             <div class="logo">
                 <img src="img/keychronlogo.png" alt="">
             </div>
         </a>
         <div class="keyboards">
-            <button >Keyboard <i class="fas fa-chevron-down"></i></button>
+            <button>Keyboard <i class="fas fa-chevron-down"></i></button>
             <ul>
                 <li><a href="k2.html">Keychron K2</a></li>
                 <li><a href="k4.html">Keychron K4</a></li>
@@ -186,8 +195,64 @@
                 </div><br>
                 <div>
                     <button class="sold" disabled>Sold out</button>
-                    <button class="noti">เตือนฉันเมื่อสินค้าพร้อมจำหน่าย</button>
-                    <br><br>
+                    <br>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary remind" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        เตือนฉันเมื่อสินค้าพร้อมจําหน่าย
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <b>
+                                        <h5 class="modal-title" id="staticBackdropLabel">เตือนฉันเมื่อสินค้าพร้อมจําหน่าย</h5>
+                                    </b>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>เราจะส่งการแจ้งเตือนให้คุณทราบทันทีที่มีผลิตภัณฑ์นี้อีกครั้ง</p>
+                                    <h5>Keychron K2 V.2 Wireless Hot-swappable Mechanical Keyboard</h5>
+                                    <select id="spec">
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Dark grey / Gateron red switch / ภาษาอังกฤษ</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Dark grey / Gateron red switch / ภาษาไทย</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Dark grey / Gateron blue switch / ภาษาอังกฤษ</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Dark grey / Gateron blue switch / ภาษาไทย</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Dark grey / Gateron brown switch / ภาษาอังกฤษ</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Dark grey / Gateron brown switch / ภาษาไทย</option>
+
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Light grey / Gateron red switch / ภาษาอังกฤษ</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Light grey / Gateron red switch / ภาษาไทย</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Light grey / Gateron blue switch / ภาษาอังกฤษ</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Light grey / Gateron blue switch / ภาษาไทย</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Light grey / Gateron brown switch / ภาษาอังกฤษ</option>
+                                        <option value="kkk">RGB Backlight Alumunium Frame Hot-Swappable Light grey / Gateron brown switch / ภาษาไทย</option>
+                                    </select>
+                                    <br>
+
+                                    <div class="wrapperinput">
+                                        <button class="emaill">email</button>
+                                        <button class="smss">sms</button>
+                                    </div>
+                                    <br>
+                                    <input class="emailinput"type="text" placeholder="  อีเมล">
+                                    <br>
+                                    <button type="button" class="btn btn-dark" onclick="remindme()">เตือนฉัน</button>
+                                </div>
+                                <div class="modal-footer">
+                                    <div class="wrap-modalfooter">
+                                        <p>We respect your privacy and don't share your email with anybody</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><br>
                 </div>
                 <hr>
                 <div class="face-tweet">
@@ -209,7 +274,10 @@
         <h3>(Hot-swappable)</h3>
         <h3>คีย์บอร์ดกะทัดรัดขนาด 100 ปุ่มที่ครบครันเทียบเท่า Full-sized</h3>
         <br>
-        <p style="font-size: 16px; line-height: 40px;">Keychron K4 เป็นคีย์บอร์ดดีไซน์กะทัดรัด ประกอบไปด้วย 100 ปุ่มที่จำเป็น มีฟังก์ชั่นครบครันแบบคีย์บอร์ด Full-sized นอกจากนี้ยังสามารถเลือกปรับแต่ง<br>สวิตช์ระดับพรีเมียมเพื่อประสิทธิภาพสูงสุดในการทำงานและประสบการณ์การพิมพ์ที่ยอดเยี่ยม</p>
+        <p style="font-size: 16px; line-height: 40px;">Keychron K4 เป็นคีย์บอร์ดดีไซน์กะทัดรัด ประกอบไปด้วย 100
+            ปุ่มที่จำเป็น มีฟังก์ชั่นครบครันแบบคีย์บอร์ด Full-sized
+            นอกจากนี้ยังสามารถเลือกปรับแต่ง<br>สวิตช์ระดับพรีเมียมเพื่อประสิทธิภาพสูงสุดในการทำงานและประสบการณ์การพิมพ์ที่ยอดเยี่ยม
+        </p>
         <div class="inbox-3">
             <h3 style="margin-bottom: 40px;">มีอะไรใหม่ ใน K4 V2?</h3>
         </div>
@@ -232,11 +300,11 @@
             <div class="swap-right">
                 <h2 style="margin-bottom: 10px; margin-top: 30px;">Hot-Swappable</h2>
                 <p class="p-textbox">Keychron K4v2 (Hot-swappable) สามารถถอดและเปลี่ยน<br>
-                สวิตช์ได้โดยที่ไม่ต้องบัดกรี (Soldering) เพียงแค่ถอดสวิตช์ที่จะ<br>
-                เปลี่ยนออกแล้วใส่สวิตช์ใหม่ลงไปให้เข้าล็อก เพียงเท่านี้ก็สามารถใช้<br>
-                งานต่อได้ในทันที Keychron K4 จึงทำให้ผู้ใช้งานสามารถเลือกผสม<br>
-                สวิตช์รูปแบบต่าง ๆ ได้ง่าย สะดวก รวดเร็ว และปรับแต่งคีย์บอร์ด<br>
-                ได้ตามความต้องการ</p>
+                    สวิตช์ได้โดยที่ไม่ต้องบัดกรี (Soldering) เพียงแค่ถอดสวิตช์ที่จะ<br>
+                    เปลี่ยนออกแล้วใส่สวิตช์ใหม่ลงไปให้เข้าล็อก เพียงเท่านี้ก็สามารถใช้<br>
+                    งานต่อได้ในทันที Keychron K4 จึงทำให้ผู้ใช้งานสามารถเลือกผสม<br>
+                    สวิตช์รูปแบบต่าง ๆ ได้ง่าย สะดวก รวดเร็ว และปรับแต่งคีย์บอร์ด<br>
+                    ได้ตามความต้องการ</p>
             </div>
             <div class="pic-video-new">
                 <iframe width="1200" height="671"
@@ -251,7 +319,7 @@
             <div class="swap-right">
                 <h1 style="text-align: center; margin-top: 100px;">ภาษาไทย<br>พร้อมจำหน่ายแล้ววันนี้</h1>
             </div>
-        </div>  
+        </div>
         <div class="keyboard-thai" id="hot-1">
             <div class="swap-left-test2">
                 <img class="keyboard-gif-pic" src="img/k4gif.gif">
@@ -259,7 +327,7 @@
             <div class="swap-right">
                 <h2 style="margin-top: 50px;">เชื่อมต่อไร้สาย และ USB-C</h2>
                 <p class="p-textbox">Keychron K4 เชื่อมต่อไร้สายได้อย่างไร้ที่ติผ่าน Bluetooth<br>
-                    เวอร์ชั่น 5.1 ช่วยเพิ่มพื้นที่ให้กับโต๊ะทำงานของคุณ     สำหรับชาวเกม<br>
+                    เวอร์ชั่น 5.1 ช่วยเพิ่มพื้นที่ให้กับโต๊ะทำงานของคุณ สำหรับชาวเกม<br>
                     เมอร์และผู้ที่ชื่นชอบการใช้ mechanical keyboard สามารถใช้สาย<br>
                     USB Type-C ได้ เพลิดเพลินไปกับคีย์บอร์ดในสไตล์ที่คุณชอบ</p>
             </div>
@@ -275,7 +343,7 @@
                     Mac และยังมาพร้อมกับปุ่มกด 3 ปุ่มพิเศษที่ให้คุณสลับการใช้งานระหว่าง Mac<br>
                     และ Windows OS ได้อย่างง่ายดาย</p>
             </div>
-        </div>    
+        </div>
         <div class="keyboard-thai" id="hot-1">
             <div class="swap-left-test2">
                 <img class="keyboard-design-pic" src="img/design.png">
@@ -290,10 +358,11 @@
                     พร้อมขาตั้งทำมุม 9 องศาที่มอบประสบการณ์การพิมพ์ที่สะดวก<br>
                     สบายให้แก่คุณ</p>
             </div>
-        </div>    
+        </div>
         <div class="keyboard-thai-2" id="hot-7">
             <h2>แบตเตอรี่ที่ใช้งานได้ยาวนาน</h2>
-            <p class="p-textbox">K4 สามารถใช้งานได้นานถึง 72 ชั่วโมง หรือใช้งานปกติสูงสุด 9 วัน (8 ชั่วโมง / วัน) ด้วยแบตเตอรี่ที่มีความจุถึง 4000 mAh</p>
+            <p class="p-textbox">K4 สามารถใช้งานได้นานถึง 72 ชั่วโมง หรือใช้งานปกติสูงสุด 9 วัน (8 ชั่วโมง / วัน)
+                ด้วยแบตเตอรี่ที่มีความจุถึง 4000 mAh</p>
             <div class="swap-left-test3">
                 <img class="keyboard-4000mah-pic" src="img/4000mah.png">
             </div>
@@ -304,7 +373,8 @@
 
         <div class="keyboard-thai-2" id="hot-8">
             <h2>15 TYPES OF RGB</h2>
-            <p class="p-textbox">K4 ออกแบบมาให้มีตัวเลือกแสดงผลไฟ RGB มากกว่า 15 แบบ ที่คุณสามารถเลือกให้เข้ากับทุกอารมณ์ของคุณ<br>
+            <p class="p-textbox">K4 ออกแบบมาให้มีตัวเลือกแสดงผลไฟ RGB มากกว่า 15 แบบ
+                ที่คุณสามารถเลือกให้เข้ากับทุกอารมณ์ของคุณ<br>
                 เพียงกดปุ่มหลอดไฟหรือลูกศร fn + ขวาเพื่อเปลี่ยนรูปแบบ RGB</p>
             <div class="pic-video-new2">
                 <iframe width="1200" height="671"
@@ -318,9 +388,9 @@
             <div class="swap-right">
                 <h2>ตัวเลือกสวิตช์พรีเมียม</h2>
                 <p class="p-textbox">K4 ให้อิสระในการเลือกสไตล์สวิตช์ที่คุณต้องการ<br>
-                     ด้วยสวิตช์ Gateron ที่ให้ฟังก์ชั่นการใช้งานและ<br>
-                     ประสบการณ์การพิมพ์ที่แตกต่างกัน</p>
-                     <br>
+                    ด้วยสวิตช์ Gateron ที่ให้ฟังก์ชั่นการใช้งานและ<br>
+                    ประสบการณ์การพิมพ์ที่แตกต่างกัน</p>
+                <br>
                 <p class="p-textbox">สไตล์สวิตช์ที่ออกแบบมาเป็นพิเศษโดยคำนึงถึงความรวดเร็ว<br>
                     และแม่นยำมากยิ่งขึ้น ทนทานต่อการกดถึง 50-80 ล้านครั้ง<br>
                     มีประสิทธิภาพและทนทานยิ่งขึ้นเพื่อเพิ่มความโปรดักทีฟ และ<br>
@@ -353,7 +423,8 @@
                                 <br>Connection: Bluetooth and Type-C cable
                                 <br>Bluetooth version: 5.1 <br>Bluetooth Device Name: Keychron K4
                                 <br>Compatible System: macOS/Windows/<br></span></td>
-                        <td><span align="center" class="span-textbox">Dimension (Aluminum bezels version): 376 x 129 x 38mm
+                        <td><span align="center" class="span-textbox">Dimension (Aluminum bezels version): 376 x 129 x
+                                38mm
                                 <br>Weight: About 933g / 2.05 lbs
                                 <br>Operating Environment: -10 to 50℃
                                 <br>
@@ -405,7 +476,7 @@
             </div>
         </div>
 
-       <center>
+        <center>
             <div class="legal-footer">
                 <img class="legal-foot" src="img/lastfooter.png" alt="">
             </div>
@@ -417,14 +488,14 @@
     var small = document.getElementsByClassName("small-img");
     var demo = document.querySelectorAll(".d");
     for (let i = 0; i <= 4; i++) {
-            small[i].onclick = function () {
-                Product.src = small[i].src;
-            }
+        small[i].onclick = function () {
+            Product.src = small[i].src;
         }
+    }
     function box() {
         demo.forEach(demo => demo.classList.remove('active'));
         this.classList.add('active');
-        
+
     }
     demo.forEach(demo => demo.addEventListener('click', box));
     // for (let i = 0; i <= 4; i++) {
@@ -435,7 +506,7 @@
     var num_item = 1;
     var price_total = 3890;
     let boxx = 0;
-    var numt =  0;
+    var numt = 0;
     $(document).ready(function () {
         $('.minus').click(function () {
             var $input = $(this).parent().find('input');
@@ -518,14 +589,14 @@
         for (var i = 0; i < g1.length; i++) {
             if (g1[i].checked) {
                 var text = g1[i].value;
-                var t = document.createTextNode(text+" / ");
+                var t = document.createTextNode(text + " / ");
                 ptag2.appendChild(t);
             }
         }
         for (var i = 0; i < g2.length; i++) {
             if (g2[i].checked) {
                 var text = g2[i].value;
-                var t = document.createTextNode(text+" / ");
+                var t = document.createTextNode(text + " / ");
                 ptag2.appendChild(t);
             }
         }
@@ -579,22 +650,22 @@
         var l1 = document.getElementById("line1");
         var sub = document.getElementById("sub1")
         $(document).ready(function () {
-            oper1.onclick = function() {
+            oper1.onclick = function () {
                 var num = amount.innerHTML;
                 num -= 1;
                 numt -= 1;
                 boxx -= 3890;
-                if ((numt <= 0) || (num <= 0 )) {
+                if ((numt <= 0) || (num <= 0)) {
                     big_box.remove();
                 }
-                else if(numt == 0){
+                else if (numt == 0) {
                     boxx = 0;
                 }
                 amount.innerHTML = num;
 
                 total.innerHTML = boxx + ".00 B";
             };
-            oper2.onclick = function() {
+            oper2.onclick = function () {
                 var num = parseInt(amount.innerHTML);
                 num += 1;
                 numt += 1;
@@ -683,6 +754,12 @@
         x.classList.remove("animate-cart");
         y.classList.remove("go-left");
     }
+
+
+    function remindme() {
+        alert("โปรดระบุอีเมล");
+    }
 </script>
 <script src="js/main.js"></script>
-</html> 
+
+</html>
