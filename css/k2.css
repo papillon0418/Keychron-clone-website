@@ -505,7 +505,7 @@ label.click input:checked+span {
 }
 .ver1{
     width: 500px;
-    left: 0;
+    left: 10%;
     position: absolute;
     margin-top: 0%;
     height: 272px;
@@ -513,7 +513,7 @@ label.click input:checked+span {
 .ver2{
     width: 500px;
     height: 272px;
-    right: 0;
+    right: 15%;
     position: absolute;
     margin-top: 0%;
 }
@@ -544,10 +544,10 @@ label.click input:checked+span {
 }
 #bat-1{
     height: 220px;
-    top: 1495px;
+    top: 1525px;
 }
 #bat-2{
-    top: 1465px;
+    top: 1505px;
     height: 309px;
     width: 480px;
 }
