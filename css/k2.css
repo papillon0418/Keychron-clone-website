@@ -355,7 +355,7 @@ label.click input:checked+span {
     font-size: 20px;
 }
 .number {
-    border: 2px solid red;
+/*     border: 2px solid red; */
     position: relative;
     width: 12%;
     display: flex;
