@@ -135,10 +135,10 @@
         <h1 class="longinTxt" style="text-align: center;">Login</h1>
         <div class="form">
             <label for="uname" class="hang txt"><b>EMAIL</b></label><br>
-            <input type="text" placeholder="" name="uname" required class="hang txtbox"><br>
+            <input id="username" type="text" placeholder="" name="uname" required class="hang txtbox"><br>
 
             <label for="psw" class="hang txt"><b>PASSWORD</b></label><br>
-            <input type="password" placeholder="" name="psw" required class="hang txtbox"><br>
+            <input id="password" type="password" placeholder="" name="psw" required class="hang txtbox"><br>
 
             <button type="submit" class="hang loginBtn">Sign In</button>
             <br><br>
@@ -225,4 +225,18 @@
     </footer>
 </body>
 <script src="js/main.js"></script>
+    <script>
+    function validate() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username.length < 5) {
+            alert("Please enter email correctly");
+        }
+        if (password.length < 5) {
+            alert("Please enter password correctly");
+        }
+        console.log(username);
+    }
+</script>
 </html>
