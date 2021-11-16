@@ -442,14 +442,14 @@
     var Product = document.getElementById("Product");
     var small = document.getElementsByClassName("small-img");
     var demo = document.querySelectorAll(".d");
-    function box() {
-        demo.forEach(demo => demo.classList.remove('active'));
-        this.classList.add('active');
-        for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 4; i++) {
             small[i].onclick = function () {
                 Product.src = small[i].src;
             }
         }
+    function box() {
+        demo.forEach(demo => demo.classList.remove('active'));
+        this.classList.add('active');
     }
     demo.forEach(demo => demo.addEventListener('click', box));
     // for (let i = 0; i <= 4; i++) {
