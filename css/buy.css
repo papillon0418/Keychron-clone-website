@@ -906,3 +906,11 @@ h1 {
         transition: 1s;
     }
 }
+
+.footer-menu a {
+    color:#000;
+}
+
+.footer-menu a:hover {
+    text-decoration: none;
+}
