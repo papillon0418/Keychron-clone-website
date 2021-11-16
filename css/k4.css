@@ -1194,3 +1194,11 @@ iframe{
 .modal-content {
     border-radius: 10px;
 }
+
+.footer-menu a {
+    color:#000;
+}
+
+.footer-menu a:hover {
+    text-decoration: none;
+}
