@@ -249,13 +249,14 @@ body{
     position: relative;
     /* border: 1px solid green; */
     height: 500px;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .li {
+    margin-left: 35%;
     list-style: none;
-    width: 12%;
-    height: auto;
+    width: 10%;
+    height: 500px;
     /* border: 1px solid red; */
     display: flex;
     flex-direction: column;
