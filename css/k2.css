@@ -520,7 +520,7 @@ label.click input:checked+span {
 #compare{
     top: 320px;
     position: absolute;
-    left: 340px;
+    left: 38%;
 }
 #change-2{
     top: 450px;
@@ -544,10 +544,10 @@ label.click input:checked+span {
 }
 #bat-1{
     height: 220px;
-    top: 1465px;
+    top: 1495px;
 }
 #bat-2{
-    top: 1395px;
+    top: 1465px;
     height: 309px;
     width: 480px;
 }
