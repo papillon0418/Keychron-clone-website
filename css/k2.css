@@ -50,7 +50,7 @@ body{
 .c-2{
     right: -100%;
     position: fixed;
-    z-index: 9999;
+    z-index: 10;
     background-color: #393E46;
     opacity: 0.4;
     width: 100%;
@@ -366,13 +366,20 @@ label.click input:checked+span {
 }
 /* -------------------------------- */
 .sold {
+    z-index: 1000;
     background-color: white;
+    color: #000;    
     margin-top: 20px;
     margin-bottom: 10px;
     width: 65%;
     height: 55px;
-    border: 1px solid #ACAEAD;
+    border: 2px solid #ACAEAD;
 }
+
+.sold:hover {
+    border: 1px solid black;
+}
+
 .sold:focus{
     background-color: black;
     color: white;
