@@ -459,14 +459,14 @@ label.click input:checked+span {
     width: 76%;
 }
 #p2{
-    margin-top: 10px;
+    margin-top: 60px;
     width: 55%;
 }
 #p3{
     width: 35%;
 }
 #change-1{
-    top:500px;
+    top:540px;
 }
 .pic-right{
     right: 50px;
@@ -527,7 +527,7 @@ label.click input:checked+span {
     width: 42%;
 }
 #layout{
-    top: 500px;
+    top: 460px;
 }
 #change-3{
     top: 910px;
@@ -535,7 +535,7 @@ label.click input:checked+span {
     right: 0;
 }
 .text-left-2{
-    top:930px;
+    top:970px;
     width: 40%;
     left: 0;
     position: absolute;
