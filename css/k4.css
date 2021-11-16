@@ -1165,9 +1165,14 @@ iframe{
     border-right: none;
     background-color: #000;
     color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
 }
 .smss {
     border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .remind {
