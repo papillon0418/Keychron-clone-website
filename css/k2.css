@@ -161,7 +161,9 @@ body{
 
 }
 .num2 {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 70%;
     border: 1px solid gray;
     height: 4vh;
